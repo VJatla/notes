@@ -1,0 +1,24 @@
+#+title:      index
+#+date:       [2024-05-24 Fri 06:24]
+#+identifier: 20240524T062419
+#+filetags:   :gita:
+#+OPTIONS: \n:t
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+#+HUGO_SECTION: gita
+#+EXPORT_FILE_NAME: _index
+
+* Acknowledgment
+
+- My understanding: Sarvapriyananda swami Spotify lectures.
+- Sanskrit slokas: [[https://www.holy-bhagavad-gita.org/][holy-bhagavad-gita.org]]
+- Short English: [[https://estudantedavedanta.net/Bhagavad-Gita.with.the.Commentary.of.Sri.ShankaracharyaN.pdf][Bhagavad-Gita with the commentary of Sri Shankaracharya.pdf]]
+
+* Links to verses
+
+** Chapter 2
+
+- [[file:20240523T211914--verse-33__gita.org][Verse 33]]
+- [[file:20240524T063153--verse-34-35-36.org][Verses 34, 35 and 36]]
+- [[file:20240527T070949--verse-40__chapter2_gita.org][Verse 40]]
+- [[file:20240624T065841--verse-42-43-44__chapter2_gita.org][Verses 42, 43 and 44]]
+- [[file:20240826T091004--verse-45-46-47__chapter2_class16_gita.org][Verse 45, 46 and 47]]

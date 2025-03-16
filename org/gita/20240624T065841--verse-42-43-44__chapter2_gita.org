@@ -1,0 +1,31 @@
+#+title:      verse 42 43 44
+#+date:       [2024-06-24 Mon 06:58]
+#+filetags:   :chapter2:gita:
+#+identifier: 20240624T065841
+#+OPTIONS: \n:t
+#+HUGO_SECTION: gita
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+
+
+* Verses
+
+यामिमां पुष्पितां वाचं प्रवदन्त्यविपश्चित: |
+वेदवादरता: पार्थ नान्यदस्तीति वादिन: || 42||
+कामात्मान: स्वर्गपरा जन्मकर्मफलप्रदाम् |
+क्रियाविशेषबहुलां भोगैश्वर्यगतिं प्रति || 43||
+भोगैश्वर्यप्रसक्तानां तयापहृतचेतसाम् |
+व्यवसायात्मिका बुद्धि: समाधौ न विधीयते || 44||
+
+* Short translation
+
+No conviction of a resolute nature is formed in the mind of those who
+are attached to pleasures and power, and whose minds are drawn away by
+that flovvery speech 'vhich the unwise- enamoured of Vedic utterances,
+declaring there is nothing else, full of desire, having svarga as
+their goal-utter, (a speech) which promises birth as the reward of
+actions and which abounds in specific acts for the attainment of
+pleasure and power, 0 son of Pritha.
+
+* My notes
+
+/<I need to listen to 15th podcast of Bhagavadgita by Swami Sarvapriyananda to understand this>/

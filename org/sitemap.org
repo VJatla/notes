@@ -1,0 +1,27 @@
+#+TITLE: Sitemap
+
+- [[file:20241104T165832--docker.org][Docker]]
+- [[file:20241030T084015--files-and-directories__linux.org][files and directories]]
+- [[file:20240522T212610--index.org][index]]
+- emacs
+  - [[file:emacs/20250130T140150--merging-directories__ediff_ztree.org][merging directories]]
+- gita
+  - [[file:gita/20240524T062419--index.org][index]]
+  - [[file:gita/20240523T211914--verse-33__gita.org][verse 33]]
+  - [[file:gita/20240524T063153--verse-34-35-36.org][verse 34 35  36]]
+  - [[file:gita/20240524T070930--verse-37.org][verse 37]]
+  - [[file:gita/20240524T072927--verse-38.org][verse 38]]
+  - [[file:gita/20240527T070949--verse-40__chapter2_gita.org][verse 40]]
+  - [[file:gita/20240624T065841--verse-42-43-44__chapter2_gita.org][verse 42 43 44]]
+  - [[file:gita/20240826T091004--verse-45-46-47__chapter2_class16_gita.org][verse 45 46 47]]
+- python
+  - [[file:python/20240925T173709--special-methods__python.org][special methods]]
+- statistics
+  - [[file:statistics/20250302T191540--linear-regression__parametric_regression.org][Linear regression]]
+  - [[file:statistics/20250302T185233--nearest-neighbour-averaging__nonparametric_regression_smoothing.org][Nearest neighbour averaging]]
+  - [[file:statistics/20250302T093253--regression.org][Regression]]
+  - [[file:statistics/20250227T072155--supervised-learning__stats.org][Supervised learning]]
+  - [[file:statistics/20250227T072623--unsupervised-learning.org][Unsupervised learning]]
+  - [[file:statistics/20250303T210015--curse-of-dimentionality.org][curse of dimentionality]]
+  - [[file:statistics/20250227T072232--index__stats.org][index]]
+  - [[file:statistics/20250307T074254--interpretability-vs-flexibility.org][interpretability vs flexibility]]

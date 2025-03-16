@@ -1,0 +1,12 @@
+#+title:      Supervised learning
+#+date:       [2025-02-27 Thu 07:21]
+#+filetags:
+#+identifier: 20250227T072155
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+#+HUGO_SECTION: statistics
+#+hugo_custom_front_matter: :math true
+
+* Supervised learning
+
+Learning paradigm in which A system learns from *labeled data* to
+predict outcomes.

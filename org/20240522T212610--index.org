@@ -1,0 +1,15 @@
+#+TITLE: index
+#+date:       [2024-05-22 Wed 21:26]
+#+filetags:
+#+identifier: 20240522T212610
+#+EXPORT_FILE_NAME: index
+
+* Introduction
+
+
+This website hosts my notes. Afte trying various tools
+
+* Quick links
+
+- [[file:gita/][Gita]]
+- [[file:statistics/20250227T072232--index__stats.org][Statistics]]

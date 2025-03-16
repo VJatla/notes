@@ -1,0 +1,24 @@
+#+title:      files and directories
+#+date:       [2024-10-30 Wed 08:40]
+#+filetags:   :linux:
+#+identifier: 20241030T084015
+#+HUGO_SECTION: .
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+
+
+* Creating
+
+#+begin_src shell
+  touch <file name>  # Creates a file with <file name>
+#+end_src
+
+* Deleting
+
+** Multiple deletions
+
+- To delete all the files with ~.npy~ extension in a directory and
+  subdirectories use
+
+  #+begin_src shell
+    find <directory path> -name "*.npy" -type f -delete
+  #+end_src

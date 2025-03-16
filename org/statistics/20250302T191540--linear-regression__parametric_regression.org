@@ -1,0 +1,10 @@
+#+title:      Linear regression
+#+date:       [2025-03-02 Sun 19:15]
+#+filetags:   :parametric:regression:
+#+identifier: 20250302T191540
+#+HUGO_SECTION: statistics
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+#+hugo_custom_front_matter: :math true
+
+* Description
+

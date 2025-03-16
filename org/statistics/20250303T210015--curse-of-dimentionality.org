@@ -1,0 +1,30 @@
+#+title:      curse of dimentionality
+#+date:       [2025-03-03 Mon 21:00]
+#+filetags:
+#+identifier: 20250303T210015
+#+HUGO_SECTION: statistics
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+#+hugo_custom_front_matter: :math true
+
+
+* Description
+
+As the number of dimensions (features) increases, the volume of the
+space grows exponentially, which means that data becomes increasingly
+sparse. This sparsity makes it difficult to obtain reliable estimates
+and requires exponentially more data to achieve the same level of
+accuracy as in lower dimensions.
+
+This is very evident when using algorithms like [[file:20250302T185233--nearest-neighbour-averaging__nonparametric_regression_smoothing.org][Nearest neighbour
+averaging]]. These algorithms depend on local neighbourhood
+estimates. With increased number of dimensions the volume of space to
+consider to capture the same percentage of data increases
+eponentially. In higher dimensions the space is no more local, but
+requires us to consider a large fraction of the data for estimation
+which does not capture local variability.
+
+* How to avoid?
+
+This can be avoided by introducing structure in modeling. The structure
+makes sure that the modeling does not depend on local neighbourhood. An
+example will be, Linear regression.
