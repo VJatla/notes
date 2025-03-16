@@ -1,0 +1,6 @@
+* Notes
+
+** Links:
+
+- [[https://vjatla.github.io/notes/][Github pages]]
+- [[https://vjatla.github.io/notes/sitemap.html][site map]]
