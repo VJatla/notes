@@ -7,9 +7,10 @@
 * Introduction
 
 
-This website hosts my notes. Afte trying various tools
+This website hosts my notes. After trying various tools to host my
+notes, I am using the most simple one. I recollect the quote from
+slackware, /"Keep It Simple, Stupid."/.
 
-* Quick links
+[[file:sitemap.org][sitemap]]
 
-- [[file:gita/][Gita]]
-- [[file:statistics/20250227T072232--index__stats.org][Statistics]]
+

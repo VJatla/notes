@@ -1,5 +1,11 @@
 * Notes
 
+** Publishing
+
+#+begin_src shell
+  emacs --batch -l publish.el
+#+end_src
+
 ** Links:
 
 - [[https://vjatla.github.io/notes/][Github pages]]
