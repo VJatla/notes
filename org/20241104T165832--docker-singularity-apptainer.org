@@ -1,4 +1,4 @@
-#+title:      Docker
+#+title:      Docker, singularity, apptainer
 #+date:       [2024-11-04 Mon 16:58]
 #+filetags:
 #+identifier: 20241104T165832
@@ -6,9 +6,11 @@
 #+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
 
 
-* Docker setup
+* Docker
 
-**  Execute docker command with non-root user
+** Docker setup
+
+***  Execute docker command with non-root user
 
 Restart the system after executing the following commands.
 
@@ -17,11 +19,11 @@ Restart the system after executing the following commands.
   sudo usermod -aG docker $USER
 #+end_src
 
-* Important docker commands
+** Important docker commands
 
 Typically docker needs ~sudo~ access.
 
-* Docker list commands
+** Docker list commands
 
 | Command                                | Description                                     |
 |----------------------------------------+-------------------------------------------------|
@@ -29,8 +31,7 @@ Typically docker needs ~sudo~ access.
 | docker ps                              | Lists running containers. (ps = process status) |
 | docker ps -a                           | Lists running and excited containers.           |
 
-
-* Starting containers
+** Starting containers
 
 | Command                                                            | Description                       |
 |--------------------------------------------------------------------+-----------------------------------|
@@ -39,7 +40,7 @@ Typically docker needs ~sudo~ access.
 | docker start <container id>                                        | Starting stopped container        |
 | docker container run  -v <host path>:<docker path> -it             | o                                 |
 
-* Attaching
+** Attaching
 
 | Command                             | Description                                      |
 |-------------------------------------+--------------------------------------------------|
@@ -47,11 +48,43 @@ Typically docker needs ~sudo~ access.
 | docker exec -it <container id> bash | Attaching another terminal to running container. |
 |                                     |                                                  |
 
-* Removing
+** Removing
 
 | Command                  | Description                    |
 |--------------------------+--------------------------------|
 | docker rmi <image id>    | removes docker images          |
 | docker rm <container id> | removes stopped container      |
-| docker prune             | Removes all stopped containers |
-|                          |                                |
+| docker system prune      | Removes all stopped containers |
+
+* Apptainer
+
+** Converting docker to singularity
+
+*** Pull + convert
+
+#+begin_src shell
+  apptainer pull <sif file> <docker hub link>
+  
+  # Example:
+  apptainer pull cuda_12.6.3.sif docker://nvidia/cuda:12.6.3-cudnn-devel-ubuntu22.04
+#+end_src
+
+*** Convert local image
+
+This involves (1) converting to tar file and (2) converting to sif file.
+
+#+begin_src shell
+  # First convert to tar file
+  docker save -o <name>.tar <image>
+  docker save -o mlev_39_tf260.tar 708d3b89ade9
+
+  # Build app container
+  apptainer build mlev_39_tf260.sif docker-archive://mlev_39_tf260.tar
+#+end_src
+
+** Starting
+
+| Command                         | Description                            |
+|---------------------------------+----------------------------------------|
+| apptainer shell --nv <sif file> | Start shell with nvidia driver library |
+|                                 |                                        |
