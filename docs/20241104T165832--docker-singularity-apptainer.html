@@ -6,7 +6,7 @@
 <!-- 2025-05-10 Sat 19:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>index</title>
+<title>Docker, singularity, apptainer</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -195,32 +195,294 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">index</h1>
+<h1 class="title">Docker, singularity, apptainer</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb5ad2d6">1. Introduction</a></li>
+<li><a href="#org5957277">1. Docker</a>
+<ul>
+<li><a href="#org72941a0">1.1. Docker setup</a>
+<ul>
+<li><a href="#org90b5582">1.1.1. Execute docker command with non-root user</a></li>
+</ul>
+</li>
+<li><a href="#org47f129c">1.2. Important docker commands</a></li>
+<li><a href="#orga017d83">1.3. Docker list commands</a></li>
+<li><a href="#orgfeb4488">1.4. Starting containers</a></li>
+<li><a href="#org8f7df93">1.5. Attaching</a></li>
+<li><a href="#org6d8a3bb">1.6. Removing</a></li>
+</ul>
+</li>
+<li><a href="#org452e313">2. Apptainer</a>
+<ul>
+<li><a href="#org6d3bebd">2.1. Converting docker to singularity</a>
+<ul>
+<li><a href="#org886375b">2.1.1. Pull + convert</a></li>
+<li><a href="#orgd41b197">2.1.2. Convert local image</a></li>
+</ul>
+</li>
+<li><a href="#org250ffaa">2.2. Starting</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb5ad2d6" class="outline-2">
-<h2 id="orgb5ad2d6"><span class="section-number-2">1.</span> Introduction</h2>
+<div id="outline-container-org5957277" class="outline-2">
+<h2 id="org5957277"><span class="section-number-2">1.</span> Docker</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org72941a0" class="outline-3">
+<h3 id="org72941a0"><span class="section-number-3">1.1.</span> Docker setup</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org90b5582" class="outline-4">
+<h4 id="org90b5582"><span class="section-number-4">1.1.1.</span> Execute docker command with non-root user</h4>
+<div class="outline-text-4" id="text-1-1-1">
 <p>
-This website hosts my notes. After trying various tools to host my
-notes, I am using the most simple one. I recollect the quote from
-slackware, <i>"Keep It Simple, Stupid."</i>.
+Restart the system after executing the following commands.
 </p>
 
+<div class="org-src-container">
+<pre class="src src-shell">sudo groupadd docker
+sudo usermod -aG docker $USER
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org47f129c" class="outline-3">
+<h3 id="org47f129c"><span class="section-number-3">1.2.</span> Important docker commands</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-<a href="sitemap.html">sitemap</a>
+Typically docker needs <code>sudo</code> access.
 </p>
+</div>
+</div>
+<div id="outline-container-orga017d83" class="outline-3">
+<h3 id="orga017d83"><span class="section-number-3">1.3.</span> Docker list commands</h3>
+<div class="outline-text-3" id="text-1-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">docker image list</td>
+<td class="org-left">List docker images in current system.</td>
+</tr>
+
+<tr>
+<td class="org-left">docker ps</td>
+<td class="org-left">Lists running containers. (ps = process status)</td>
+</tr>
+
+<tr>
+<td class="org-left">docker ps -a</td>
+<td class="org-left">Lists running and excited containers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgfeb4488" class="outline-3">
+<h3 id="orgfeb4488"><span class="section-number-3">1.4.</span> Starting containers</h3>
+<div class="outline-text-3" id="text-1-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">docker container run -it &lt;image&gt;:&lt;tag&gt;</td>
+<td class="org-left">Starting image in iteractive mode</td>
+</tr>
+
+<tr>
+<td class="org-left">docker container run -it &#x2013;runtime=nvidia &#x2013;gpus all &lt;image&gt;:&lt;tag&gt;</td>
+<td class="org-left">Above + accessing nvidia GPUs</td>
+</tr>
+
+<tr>
+<td class="org-left">docker start &lt;container id&gt;</td>
+<td class="org-left">Starting stopped container</td>
+</tr>
+
+<tr>
+<td class="org-left">docker container run  -v &lt;host path&gt;:&lt;docker path&gt; -it</td>
+<td class="org-left">o</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org8f7df93" class="outline-3">
+<h3 id="org8f7df93"><span class="section-number-3">1.5.</span> Attaching</h3>
+<div class="outline-text-3" id="text-1-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">docker attach &lt;container id&gt;</td>
+<td class="org-left">Attaching to running container.</td>
+</tr>
+
+<tr>
+<td class="org-left">docker exec -it &lt;container id&gt; bash</td>
+<td class="org-left">Attaching another terminal to running container.</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org6d8a3bb" class="outline-3">
+<h3 id="org6d8a3bb"><span class="section-number-3">1.6.</span> Removing</h3>
+<div class="outline-text-3" id="text-1-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">docker rmi &lt;image id&gt;</td>
+<td class="org-left">removes docker images</td>
+</tr>
+
+<tr>
+<td class="org-left">docker rm &lt;container id&gt;</td>
+<td class="org-left">removes stopped container</td>
+</tr>
+
+<tr>
+<td class="org-left">docker system prune</td>
+<td class="org-left">Removes all stopped containers</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org452e313" class="outline-2">
+<h2 id="org452e313"><span class="section-number-2">2.</span> Apptainer</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6d3bebd" class="outline-3">
+<h3 id="org6d3bebd"><span class="section-number-3">2.1.</span> Converting docker to singularity</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org886375b" class="outline-4">
+<h4 id="org886375b"><span class="section-number-4">2.1.1.</span> Pull + convert</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<div class="org-src-container">
+<pre class="src src-shell">apptainer pull &lt;sif file&gt; &lt;docker hub link&gt;
+
+# Example:
+apptainer pull cuda_12.6.3.sif docker://nvidia/cuda:12.6.3-cudnn-devel-ubuntu22.04
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd41b197" class="outline-4">
+<h4 id="orgd41b197"><span class="section-number-4">2.1.2.</span> Convert local image</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+This involves (1) converting to tar file and (2) converting to sif file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"># First convert to tar file
+docker save -o &lt;name&gt;.tar &lt;image&gt;
+docker save -o mlev_39_tf260.tar 708d3b89ade9
+
+# Build app container
+apptainer build mlev_39_tf260.sif docker-archive://mlev_39_tf260.tar
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org250ffaa" class="outline-3">
+<h3 id="org250ffaa"><span class="section-number-3">2.2.</span> Starting</h3>
+<div class="outline-text-3" id="text-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">apptainer shell &#x2013;nv &lt;sif file&gt;</td>
+<td class="org-left">Start shell with nvidia driver library</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2024-05-22 Wed 21:26</p>
+<p class="date">Date: 2024-11-04 Mon 16:58</p>
 <p class="date">Created: 2025-05-10 Sat 19:19</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
