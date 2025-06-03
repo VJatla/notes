@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-05-10 Sat 19:19 -->
+<!-- 2025-06-03 Tue 06:59 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Regression</title>
 <meta name="generator" content="Org Mode" />
-<style type="text/css">
+<style>
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -232,26 +232,27 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9b329b4">1. Definition</a>
+<li><a href="#org1e1c71b">1. Definition</a>
 <ul>
-<li><a href="#org2a852a5">1.1. Notes</a></li>
+<li><a href="#org1398f53">1.1. Notes</a></li>
 </ul>
 </li>
-<li><a href="#org7921c0a">2. Ideal regression function</a></li>
-<li><a href="#org875f670">3. Estimate regression function</a></li>
-<li><a href="#orge329775">4. Error</a>
+<li><a href="#orgbaf9a51">2. Ideal regression function</a></li>
+<li><a href="#orgac0cd30">3. Estimate regression function</a></li>
+<li><a href="#orgfe68566">4. Error</a>
 <ul>
-<li><a href="#org58d5e2c">4.1. Irreducible error (\(\epsilon\))</a></li>
-<li><a href="#org2f56aec">4.2. Error of estimate \(\hat{f}(X)\)</a></li>
+<li><a href="#org2275b99">4.1. Irreducible error (\(\epsilon\))</a></li>
+<li><a href="#org815c628">4.2. Error of estimate \(\hat{f}(X)\)</a></li>
 </ul>
 </li>
-<li><a href="#orgba46e65">5. Nonparametric regression</a></li>
-<li><a href="#org13aa6f0">6. Parametric regression</a></li>
+<li><a href="#org8ae3765">5. Nonparametric regression</a></li>
+<li><a href="#org6994221">6. Parametric regression</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9b329b4" class="outline-2">
-<h2 id="org9b329b4"><span class="section-number-2">1.</span> Definition</h2>
+
+<div id="outline-container-org1e1c71b" class="outline-2">
+<h2 id="org1e1c71b"><span class="section-number-2">1.</span> Definition</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We have output variable \(Y\) and vector of \(p\) independent input
@@ -284,8 +285,9 @@ Y = f(X) + \epsilon
 The goal here is to estimate \(f\).
 </p>
 </div>
-<div id="outline-container-org2a852a5" class="outline-3">
-<h3 id="org2a852a5"><span class="section-number-3">1.1.</span> Notes</h3>
+
+<div id="outline-container-org1398f53" class="outline-3">
+<h3 id="org1398f53"><span class="section-number-3">1.1.</span> Notes</h3>
 <div class="outline-text-3" id="text-1-1">
 <ol class="org-ol">
 <li>An instance of \(X\) is prepresented using \(x\).</li>
@@ -313,7 +315,7 @@ An instance of \(x\) may have multiple values of \(y\).
 </p>
 
 
-<div id="org33612f2" class="figure">
+<div id="org6710176" class="figure">
 <p><img src="pics/regression_multiple_y_at_x.png" alt="regression_multiple_y_at_x.png" width="600px" />
 </p>
 <p><span class="figure-number">Figure 1: </span>At an instance of \(x\) we may have multiple \(y$\) values.</p>
@@ -322,8 +324,9 @@ An instance of \(x\) may have multiple values of \(y\).
 </div>
 </div>
 </div>
-<div id="outline-container-org7921c0a" class="outline-2">
-<h2 id="org7921c0a"><span class="section-number-2">2.</span> Ideal regression function</h2>
+
+<div id="outline-container-orgbaf9a51" class="outline-2">
+<h2 id="orgbaf9a51"><span class="section-number-2">2.</span> Ideal regression function</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 An ideal \(f(X)\) at \(X = x\) with regard to mean-squared perdiction
@@ -333,7 +336,7 @@ will not have data at every \(X = x\).
 </p>
 
 
-<div id="org175a273" class="figure">
+<div id="orgfdc5f95" class="figure">
 <p><img src="./pics/regression_ideal_fx_annotatied.png" alt="regression_ideal_fx_annotatied.png" width="600px" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Ideal \(f(X)\). (<a href="scripts/regression_plot.py">code</a>)</p>
@@ -348,8 +351,10 @@ f(X) = E(Y|X_1 = x_1, X_2 = x_2, \dots, X_p = x_p)
 \end{equation}
 </div>
 </div>
-<div id="outline-container-org875f670" class="outline-2">
-<h2 id="org875f670"><span class="section-number-2">3.</span> Estimate regression function</h2>
+
+
+<div id="outline-container-orgac0cd30" class="outline-2">
+<h2 id="orgac0cd30"><span class="section-number-2">3.</span> Estimate regression function</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 An estimate of \(f(X)\) using data is represented using <i>"hat"</i>,
@@ -357,12 +362,14 @@ An estimate of \(f(X)\) using data is represented using <i>"hat"</i>,
 </p>
 </div>
 </div>
-<div id="outline-container-orge329775" class="outline-2">
-<h2 id="orge329775"><span class="section-number-2">4.</span> Error</h2>
+
+
+<div id="outline-container-orgfe68566" class="outline-2">
+<h2 id="orgfe68566"><span class="section-number-2">4.</span> Error</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org58d5e2c" class="outline-3">
-<h3 id="org58d5e2c"><span class="section-number-3">4.1.</span> Irreducible error (\(\epsilon\))</h3>
+<div id="outline-container-org2275b99" class="outline-3">
+<h3 id="org2275b99"><span class="section-number-3">4.1.</span> Irreducible error (\(\epsilon\))</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 \(\epsilon = Y - f(X)\) is the irreducible error. Even tho, we know
@@ -372,15 +379,16 @@ values at each \(X=x\).
 </p>
 
 
-<div id="org001585e" class="figure">
+<div id="org7a5beb9" class="figure">
 <p><img src="./pics/regression_epsilon.png" alt="regression_epsilon.png" width="600px" />
 </p>
 <p><span class="figure-number">Figure 3: </span>The unavoidable error, \(\epsilon\).</p>
 </div>
 </div>
 </div>
-<div id="outline-container-org2f56aec" class="outline-3">
-<h3 id="org2f56aec"><span class="section-number-3">4.2.</span> Error of estimate \(\hat{f}(X)\)</h3>
+
+<div id="outline-container-org815c628" class="outline-3">
+<h3 id="org815c628"><span class="section-number-3">4.2.</span> Error of estimate \(\hat{f}(X)\)</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 The sum of squared error when using the estimate \(\hat{f}(X)\) can be
@@ -399,16 +407,18 @@ irreducible error.
 </div>
 </div>
 </div>
-<div id="outline-container-orgba46e65" class="outline-2">
-<h2 id="orgba46e65"><span class="section-number-2">5.</span> Nonparametric regression</h2>
+
+<div id="outline-container-org8ae3765" class="outline-2">
+<h2 id="org8ae3765"><span class="section-number-2">5.</span> Nonparametric regression</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><a href="20250302T185233--nearest-neighbour-averaging__nonparametric_regression_smoothing.html">Nearest neighbour</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org13aa6f0" class="outline-2">
-<h2 id="org13aa6f0"><span class="section-number-2">6.</span> Parametric regression</h2>
+
+<div id="outline-container-org6994221" class="outline-2">
+<h2 id="org6994221"><span class="section-number-2">6.</span> Parametric regression</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><a href="20250302T191540--linear-regression__parametric_regression.html">Linear regression</a></li>
@@ -418,7 +428,7 @@ irreducible error.
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2025-03-02 Sun 09:32</p>
-<p class="date">Created: 2025-05-10 Sat 19:19</p>
+<p class="date">Created: 2025-06-03 Tue 06:59</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
