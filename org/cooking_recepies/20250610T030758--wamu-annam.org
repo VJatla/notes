@@ -3,9 +3,15 @@
 #+filetags: :ajwain: 
 #+identifier: 20250610T030758
 
+* Nomenclature
+
+- 1T = 1 Table spoon
+- 1t = 1 tea spoon
+- 1C = 1 cup
+  
 * Wamu annam
 
-1. 1 Tbsp urud dal, 1 Tbsp Chana dal, 1/2 Tbsp zeera, 1/2 Tbsp musturd seeds -- /Fry until chanadal color changes./
-2. Step 1 + 1/2 Tbsp Wamu or Ajwain
-3. Step 2 + 2 split green chillies + 2 red chilies + 1 stem curry leaves + small amout of onions -- /Cook until onion becomes translucent./
-4. Step 3 + 1 tsp turmeric + salt + cooked rice (old rice is better) -- /Mix/
+1. urud dal [1T], Chana dal [1T], zeera [1/2T], musturd seeds [1/2T] -- /Fry until chanadal color changes./
+2. Step 1 + Wamu or Ajwain [1/2T]
+3. Step 2 + split green chillies [2] + red chilies [2] + curry leaves [1 stem] + onion [1/4] -- /Cook until onion becomes translucent./
+4. Step 3 + turmeric [1t] + salt + cooked rice [2 C], old is better  -- /Mix/
