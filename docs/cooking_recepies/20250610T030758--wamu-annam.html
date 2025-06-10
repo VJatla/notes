@@ -6,7 +6,7 @@
 <!-- 2025-06-10 Tue 03:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Docker, singularity, apptainer</title>
+<title>wamu annam</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -195,304 +195,30 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Docker, singularity, apptainer</h1>
+<h1 class="title">wamu annam</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8d23cc2">1. Docker</a>
-<ul>
-<li><a href="#orgfee0634">1.1. Docker setup</a>
-<ul>
-<li><a href="#org4f53692">1.1.1. Execute docker command with non-root user</a></li>
-</ul>
-</li>
-<li><a href="#orgad0fb04">1.2. Important docker commands</a></li>
-<li><a href="#org75fbea8">1.3. Docker list commands</a></li>
-<li><a href="#org3cae70f">1.4. Starting containers</a></li>
-<li><a href="#org8103ecf">1.5. Attaching</a></li>
-<li><a href="#orgb787ece">1.6. Removing</a></li>
-</ul>
-</li>
-<li><a href="#org14dbea9">2. Apptainer</a>
-<ul>
-<li><a href="#orgdf62646">2.1. Converting docker to singularity</a>
-<ul>
-<li><a href="#org078f683">2.1.1. Pull + convert</a></li>
-<li><a href="#orgbd99404">2.1.2. Convert local image</a></li>
-</ul>
-</li>
-<li><a href="#orge359e08">2.2. Starting</a></li>
-</ul>
-</li>
+<li><a href="#org3eeb9be">1. Wamu annam</a></li>
 </ul>
 </div>
 </div>
 
-
-<div id="outline-container-org8d23cc2" class="outline-2">
-<h2 id="org8d23cc2"><span class="section-number-2">1.</span> Docker</h2>
+<div id="outline-container-org3eeb9be" class="outline-2">
+<h2 id="org3eeb9be"><span class="section-number-2">1.</span> Wamu annam</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-orgfee0634" class="outline-3">
-<h3 id="orgfee0634"><span class="section-number-3">1.1.</span> Docker setup</h3>
-<div class="outline-text-3" id="text-1-1">
-</div>
-<div id="outline-container-org4f53692" class="outline-4">
-<h4 id="org4f53692"><span class="section-number-4">1.1.1.</span> Execute docker command with non-root user</h4>
-<div class="outline-text-4" id="text-1-1-1">
-<p>
-Restart the system after executing the following commands.
-</p>
-
-<div class="org-src-container">
-<pre class="src src-shell">sudo groupadd docker
-sudo usermod -aG docker $USER
-</pre>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgad0fb04" class="outline-3">
-<h3 id="orgad0fb04"><span class="section-number-3">1.2.</span> Important docker commands</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-Typically docker needs <code>sudo</code> access.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org75fbea8" class="outline-3">
-<h3 id="org75fbea8"><span class="section-number-3">1.3.</span> Docker list commands</h3>
-<div class="outline-text-3" id="text-1-3">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Command</th>
-<th scope="col" class="org-left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">docker image list</td>
-<td class="org-left">List docker images in current system.</td>
-</tr>
-
-<tr>
-<td class="org-left">docker ps</td>
-<td class="org-left">Lists running containers. (ps = process status)</td>
-</tr>
-
-<tr>
-<td class="org-left">docker ps -a</td>
-<td class="org-left">Lists running and excited containers.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div id="outline-container-org3cae70f" class="outline-3">
-<h3 id="org3cae70f"><span class="section-number-3">1.4.</span> Starting containers</h3>
-<div class="outline-text-3" id="text-1-4">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Command</th>
-<th scope="col" class="org-left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">docker container run -it &lt;image&gt;:&lt;tag&gt;</td>
-<td class="org-left">Starting image in iteractive mode</td>
-</tr>
-
-<tr>
-<td class="org-left">docker container run -it &#x2013;runtime=nvidia &#x2013;gpus all &lt;image&gt;:&lt;tag&gt;</td>
-<td class="org-left">Above + accessing nvidia GPUs</td>
-</tr>
-
-<tr>
-<td class="org-left">docker start &lt;container id&gt;</td>
-<td class="org-left">Starting stopped container</td>
-</tr>
-
-<tr>
-<td class="org-left">docker container run  -v &lt;host path&gt;:&lt;docker path&gt; -it</td>
-<td class="org-left">o</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div id="outline-container-org8103ecf" class="outline-3">
-<h3 id="org8103ecf"><span class="section-number-3">1.5.</span> Attaching</h3>
-<div class="outline-text-3" id="text-1-5">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Command</th>
-<th scope="col" class="org-left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">docker attach &lt;container id&gt;</td>
-<td class="org-left">Attaching to running container.</td>
-</tr>
-
-<tr>
-<td class="org-left">docker exec -it &lt;container id&gt; bash</td>
-<td class="org-left">Attaching another terminal to running container.</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div id="outline-container-orgb787ece" class="outline-3">
-<h3 id="orgb787ece"><span class="section-number-3">1.6.</span> Removing</h3>
-<div class="outline-text-3" id="text-1-6">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Command</th>
-<th scope="col" class="org-left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">docker rmi &lt;image id&gt;</td>
-<td class="org-left">removes docker images</td>
-</tr>
-
-<tr>
-<td class="org-left">docker rm &lt;container id&gt;</td>
-<td class="org-left">removes stopped container</td>
-</tr>
-
-<tr>
-<td class="org-left">docker system prune</td>
-<td class="org-left">Removes all stopped containers</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org14dbea9" class="outline-2">
-<h2 id="org14dbea9"><span class="section-number-2">2.</span> Apptainer</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-orgdf62646" class="outline-3">
-<h3 id="orgdf62646"><span class="section-number-3">2.1.</span> Converting docker to singularity</h3>
-<div class="outline-text-3" id="text-2-1">
-</div>
-<div id="outline-container-org078f683" class="outline-4">
-<h4 id="org078f683"><span class="section-number-4">2.1.1.</span> Pull + convert</h4>
-<div class="outline-text-4" id="text-2-1-1">
-<div class="org-src-container">
-<pre class="src src-shell">apptainer pull &lt;sif file&gt; &lt;docker hub link&gt;
-
-# Example:
-apptainer pull cuda_12.6.3.sif docker://nvidia/cuda:12.6.3-cudnn-devel-ubuntu22.04
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgbd99404" class="outline-4">
-<h4 id="orgbd99404"><span class="section-number-4">2.1.2.</span> Convert local image</h4>
-<div class="outline-text-4" id="text-2-1-2">
-<p>
-This involves (1) converting to tar file and (2) converting to sif file.
-</p>
-
-<div class="org-src-container">
-<pre class="src src-shell"># First convert to tar file
-docker save -o &lt;name&gt;.tar &lt;image&gt;
-docker save -o mlev_39_tf260.tar 708d3b89ade9
-
-# Build app container
-apptainer build mlev_39_tf260.sif docker-archive://mlev_39_tf260.tar
-</pre>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orge359e08" class="outline-3">
-<h3 id="orge359e08"><span class="section-number-3">2.2.</span> Starting</h3>
-<div class="outline-text-3" id="text-2-2">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Command</th>
-<th scope="col" class="org-left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">apptainer shell &#x2013;nv &lt;sif file&gt;</td>
-<td class="org-left">Start shell with nvidia driver library</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-</tbody>
-</table>
-</div>
+<ol class="org-ol">
+<li>1 Tbsp urud dal, 1 Tbsp Chana dal, 1/2 Tbsp zeera, 1/2 Tbsp musturd seeds &#x2013; <i>Fry until chanadal color changes.</i></li>
+<li>Step 1 + 1/2 Tbsp Wamu or Ajwain</li>
+<li>Step 2 + 2 split green chillies + 2 red chilies + 1 stem curry leaves + small amout of onions &#x2013; <i>Cook until onion becomes translucent.</i></li>
+<li>Step 3 + 1 tsp turmeric + salt + cooked rice (old rice is better) &#x2013; <i>Mix</i></li>
+</ol>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2024-11-04 Mon 16:58</p>
+<p class="date">Date: 2025-06-10 Tue 03:07</p>
 <p class="date">Created: 2025-06-10 Tue 03:18</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
