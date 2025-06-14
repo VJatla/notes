@@ -5,6 +5,7 @@
 - [[file:20240522T212610--index.org][index]]
 - cooking_recepies
   - [[file:cooking_recepies/20250510T190308--amritsari-paneer-burji.org][amritsari paneer burji]]
+  - [[file:cooking_recepies/20250614T033632--chaddi-annam.org][chaddi annam]]
   - [[file:cooking_recepies/20250607T194127--kichidi.org][kichidi]]
   - [[file:cooking_recepies/20250610T030758--wamu-annam.org][wamu annam]]
   - [[file:cooking_recepies/20250603T041259--white-kurma__tamil.org][white kurma]]
