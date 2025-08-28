@@ -1,6 +1,7 @@
 #+TITLE: Sitemap
 
 - [[file:20241104T165832--docker-singularity-apptainer.org][Docker, singularity, apptainer]]
+- [[file:20250828T050303--dusty-adventure.org][dusty adventure]]
 - [[file:20241030T084015--files-and-directories__linux.org][files and directories]]
 - [[file:20240522T212610--index.org][index]]
 - cooking_recepies
