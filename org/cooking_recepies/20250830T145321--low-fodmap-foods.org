@@ -1,0 +1,47 @@
+#+title:      low FODMAP foods
+#+date:       [2025-08-30 Sat 14:53]
+#+filetags:   
+#+identifier: 20250830T145321
+
+The list is taken from [[https://ufhealth.org/care-sheets/low-fodmap-diet][ufhealth.org]].
+
+* Vegetables
+
+| Vegetables    | Vata | Pitta | Kapha |
+|---------------+------+-------+-------|
+| Bell peppers  |      |       |       |
+| Bok choy      |      |       |       |
+| Carrots       |      |       |       |
+| Celery        |      |       |       |
+| Chives        |      |       |       |
+| Cucumber      |      |       |       |
+| Eggplant      |      |       |       |
+| Green beans   |      |       |       |
+| Kale          |      |       |       |
+| Lettuce       |      |       |       |
+| Potatoes      |      |       |       |
+| Pumpkin       |      |       |       |
+| Radishes      |      |       |       |
+| Spinach       |      |       |       |
+| Tomatoes      |      |       |       |
+| Winter squash |      |       |       |
+| yams          |      |       |       |
+| Zucchini      |      |       |       |
+
+* Fruits
+
+| Fruits            | Vata | Pitta | Kapha |
+|-------------------+------+-------+-------|
+| Blueberries       |      |       |       |
+| Cantaloupe        |      |       |       |
+| Grapefruit        |      |       |       |
+| Kiwi              |      |       |       |
+| Lemons            |      |       |       |
+| Limes             |      |       |       |
+| Papaya            |      |       |       |
+| Passion fruit     |      |       |       |
+| Pineapple (limit) |      |       |       |
+| Raspberries       |      |       |       |
+| Strawberries      |      |       |       |
+
+
