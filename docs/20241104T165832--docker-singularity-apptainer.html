@@ -3,12 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-11-29 Sat 00:00 -->
+<!-- 2025-11-29 Sat 11:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Docker, singularity, apptainer</title>
+<meta name="author" content="vj" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -200,46 +201,44 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org7a5ef16">1. Docker</a>
+<li><a href="#org4f2b4fe">1. Docker</a>
 <ul>
-<li><a href="#orgc405ee5">1.1. Docker setup</a>
+<li><a href="#orgd1cbd40">1.1. Docker setup</a>
 <ul>
-<li><a href="#orgd80914e">1.1.1. Execute docker command with non-root user</a></li>
+<li><a href="#orga27991a">1.1.1. Execute docker command with non-root user</a></li>
 </ul>
 </li>
-<li><a href="#org73cac3d">1.2. Important docker commands</a></li>
-<li><a href="#org5bd0def">1.3. Docker list commands</a></li>
-<li><a href="#org4f89b7c">1.4. Starting containers</a></li>
-<li><a href="#orgd5396b0">1.5. Attaching</a></li>
-<li><a href="#org3fa0192">1.6. Removing</a></li>
+<li><a href="#orgbeb8043">1.2. Important docker commands</a></li>
+<li><a href="#orgdca691f">1.3. Docker list commands</a></li>
+<li><a href="#orgdbc45d6">1.4. Starting containers</a></li>
+<li><a href="#org0afed9d">1.5. Attaching</a></li>
+<li><a href="#org155edc1">1.6. Removing</a></li>
 </ul>
 </li>
-<li><a href="#org6b2eb2c">2. Apptainer</a>
+<li><a href="#orgea418ca">2. Apptainer</a>
 <ul>
-<li><a href="#org3dc6a81">2.1. Converting docker to singularity</a>
+<li><a href="#org08e1022">2.1. Converting docker to singularity</a>
 <ul>
-<li><a href="#orgb377601">2.1.1. Pull + convert</a></li>
-<li><a href="#org7154bd6">2.1.2. Convert local image</a></li>
+<li><a href="#org9fca22d">2.1.1. Pull + convert</a></li>
+<li><a href="#orgab9dfd3">2.1.2. Convert local image</a></li>
 </ul>
 </li>
-<li><a href="#orga290916">2.2. Starting</a></li>
+<li><a href="#orgf8a1f16">2.2. Starting</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-
-
-<div id="outline-container-org7a5ef16" class="outline-2">
-<h2 id="org7a5ef16"><span class="section-number-2">1.</span> Docker</h2>
+<div id="outline-container-org4f2b4fe" class="outline-2">
+<h2 id="org4f2b4fe"><span class="section-number-2">1.</span> Docker</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgc405ee5" class="outline-3">
-<h3 id="orgc405ee5"><span class="section-number-3">1.1.</span> Docker setup</h3>
+<div id="outline-container-orgd1cbd40" class="outline-3">
+<h3 id="orgd1cbd40"><span class="section-number-3">1.1.</span> Docker setup</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgd80914e" class="outline-4">
-<h4 id="orgd80914e"><span class="section-number-4">1.1.1.</span> Execute docker command with non-root user</h4>
+<div id="outline-container-orga27991a" class="outline-4">
+<h4 id="orga27991a"><span class="section-number-4">1.1.1.</span> Execute docker command with non-root user</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 Restart the system after executing the following commands.
@@ -253,18 +252,16 @@ sudo usermod -aG docker $USER
 </div>
 </div>
 </div>
-
-<div id="outline-container-org73cac3d" class="outline-3">
-<h3 id="org73cac3d"><span class="section-number-3">1.2.</span> Important docker commands</h3>
+<div id="outline-container-orgbeb8043" class="outline-3">
+<h3 id="orgbeb8043"><span class="section-number-3">1.2.</span> Important docker commands</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Typically docker needs <code>sudo</code> access.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org5bd0def" class="outline-3">
-<h3 id="org5bd0def"><span class="section-number-3">1.3.</span> Docker list commands</h3>
+<div id="outline-container-orgdca691f" class="outline-3">
+<h3 id="orgdca691f"><span class="section-number-3">1.3.</span> Docker list commands</h3>
 <div class="outline-text-3" id="text-1-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -299,9 +296,8 @@ Typically docker needs <code>sudo</code> access.
 </table>
 </div>
 </div>
-
-<div id="outline-container-org4f89b7c" class="outline-3">
-<h3 id="org4f89b7c"><span class="section-number-3">1.4.</span> Starting containers</h3>
+<div id="outline-container-orgdbc45d6" class="outline-3">
+<h3 id="orgdbc45d6"><span class="section-number-3">1.4.</span> Starting containers</h3>
 <div class="outline-text-3" id="text-1-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -341,9 +337,8 @@ Typically docker needs <code>sudo</code> access.
 </table>
 </div>
 </div>
-
-<div id="outline-container-orgd5396b0" class="outline-3">
-<h3 id="orgd5396b0"><span class="section-number-3">1.5.</span> Attaching</h3>
+<div id="outline-container-org0afed9d" class="outline-3">
+<h3 id="org0afed9d"><span class="section-number-3">1.5.</span> Attaching</h3>
 <div class="outline-text-3" id="text-1-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -378,9 +373,8 @@ Typically docker needs <code>sudo</code> access.
 </table>
 </div>
 </div>
-
-<div id="outline-container-org3fa0192" class="outline-3">
-<h3 id="org3fa0192"><span class="section-number-3">1.6.</span> Removing</h3>
+<div id="outline-container-org155edc1" class="outline-3">
+<h3 id="org155edc1"><span class="section-number-3">1.6.</span> Removing</h3>
 <div class="outline-text-3" id="text-1-6">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -416,17 +410,16 @@ Typically docker needs <code>sudo</code> access.
 </div>
 </div>
 </div>
-
-<div id="outline-container-org6b2eb2c" class="outline-2">
-<h2 id="org6b2eb2c"><span class="section-number-2">2.</span> Apptainer</h2>
+<div id="outline-container-orgea418ca" class="outline-2">
+<h2 id="orgea418ca"><span class="section-number-2">2.</span> Apptainer</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org3dc6a81" class="outline-3">
-<h3 id="org3dc6a81"><span class="section-number-3">2.1.</span> Converting docker to singularity</h3>
+<div id="outline-container-org08e1022" class="outline-3">
+<h3 id="org08e1022"><span class="section-number-3">2.1.</span> Converting docker to singularity</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgb377601" class="outline-4">
-<h4 id="orgb377601"><span class="section-number-4">2.1.1.</span> Pull + convert</h4>
+<div id="outline-container-org9fca22d" class="outline-4">
+<h4 id="org9fca22d"><span class="section-number-4">2.1.1.</span> Pull + convert</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <div class="org-src-container">
 <pre class="src src-shell">apptainer pull &lt;sif file&gt; &lt;docker hub link&gt;
@@ -437,9 +430,8 @@ apptainer pull cuda_12.6.3.sif docker://nvidia/cuda:12.6.3-cudnn-devel-ubuntu22.
 </div>
 </div>
 </div>
-
-<div id="outline-container-org7154bd6" class="outline-4">
-<h4 id="org7154bd6"><span class="section-number-4">2.1.2.</span> Convert local image</h4>
+<div id="outline-container-orgab9dfd3" class="outline-4">
+<h4 id="orgab9dfd3"><span class="section-number-4">2.1.2.</span> Convert local image</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <p>
 This involves (1) converting to tar file and (2) converting to sif file.
@@ -457,9 +449,8 @@ apptainer build mlev_39_tf260.sif docker-archive://mlev_39_tf260.tar
 </div>
 </div>
 </div>
-
-<div id="outline-container-orga290916" class="outline-3">
-<h3 id="orga290916"><span class="section-number-3">2.2.</span> Starting</h3>
+<div id="outline-container-orgf8a1f16" class="outline-3">
+<h3 id="orgf8a1f16"><span class="section-number-3">2.2.</span> Starting</h3>
 <div class="outline-text-3" id="text-2-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -493,7 +484,8 @@ apptainer build mlev_39_tf260.sif docker-archive://mlev_39_tf260.tar
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2024-11-04 Mon 16:58</p>
-<p class="date">Created: 2025-11-29 Sat 00:00</p>
+<p class="author">Author: vj</p>
+<p class="date">Created: 2025-11-29 Sat 11:47</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
