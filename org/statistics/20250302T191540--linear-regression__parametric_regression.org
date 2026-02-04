@@ -6,5 +6,3 @@
 #+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
 #+hugo_custom_front_matter: :math true
 
-* Description
-

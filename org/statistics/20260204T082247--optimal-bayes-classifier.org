@@ -1,0 +1,5 @@
+#+title:      optimal bayes classifier
+#+date:       [2026-02-04 Wed 08:22]
+#+filetags:   
+#+identifier: 20260204T082247
+
