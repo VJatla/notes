@@ -1,0 +1,26 @@
+#+title:      K-nearest neighbors
+#+date:       [2026-02-05 Thu 07:31]
+#+filetags:   
+#+identifier: 20260205T073140
+
+This [[denote:20260204T202410][Nearest-neighbor]] algorithm defines the neighborhood $\mathcal(N)$
+to contain $K$ samples from training data.
+
+The algorithm is:
+1. Find $K$ samples from training data nearest to $x_0$ (test predictor).
+2. Count the occurrence of each class in this neighborhood.
+3. $\hat{y}_0$ is given the label with the highest count.
+
+
+** Training and testing error rates with $K$
+
+The K increases [[denote:20260204T063317::*Error rate][training error rate]] the training error rate
+increases. At $K=1$ the training error rate is the lowest.
+
+The testing error however decreases with increasing $K$, reaches
+a lowest point, and then again shoots up. When $K=N$, all the test
+predictions will take the label of majority class in training data.
+
+#+CAPTION: Training and testing error rate trend with $K$
+#+NAME:   fig:knn-train-test-error-trend
+[[./pics/K-nearest_neighbours_training_testing_error_rate_trend.png]]

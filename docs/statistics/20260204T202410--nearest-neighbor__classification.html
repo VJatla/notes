@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-02-04 Wed 20:31 -->
+<!-- 2026-02-05 Thu 09:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Nearest-neighbor</title>
@@ -193,15 +193,66 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Nearest-neighbor</h1>
+<p>
+The idea is very similar to <a href="20250302T185233--nearest-neighbour-averaging__nonparametric_regression_smoothing.html">Nearest neighbour averaging</a>.
+</p>
+
+<ol class="org-ol">
+<li>Take a neighborhood, \(\mathcal{N}\), around \(x_0\).</li>
+<li>Count class labels.</li>
+<li>The class label that counts the most will be used to label \(\hat{y}_0\)</li>
+</ol>
+
+<p>
+This has same problems as <a href="20250302T185233--nearest-neighbour-averaging__nonparametric_regression_smoothing.html">Nearest neighbour averaging</a>, the <a href="20250303T210015--curse-of-dimentionality.html">curse of
+dimentionality</a>. As the number of dimensions increase the training
+data will become sparse.
+</p>
+
+<p>
+A widely used neighborhood algorithm is <a href="20260205T073140--k-nearest-neighbors.html">K-nearest neighbors</a>.
+</p>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2026-02-04 Wed 20:24</p>
 <p class="author">Author: vj</p>
-<p class="date">Created: 2026-02-04 Wed 20:31</p>
+<p class="date">Created: 2026-02-05 Thu 09:01</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

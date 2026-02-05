@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-02-04 Wed 20:31 -->
+<!-- 2026-02-05 Thu 09:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Nearest neighbour averaging</title>
@@ -233,38 +233,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgfb20973">1. Description</a></li>
-<li><a href="#org5a065bc">2. Fails</a></li>
+<li><a href="#org683c1d1">1. Fails</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfb20973" class="outline-2">
-<h2 id="orgfb20973"><span class="section-number-2">1.</span> Description</h2>
-<div class="outline-text-2" id="text-1">
 <p>
 This is one of the smoothing methods. It uses data in the
-neighbourhood (\(\mathcal{N}\)) to estimate regression function. Works
-when the dimentionality of the problem is small, \(p \lteq 4\) and with
+neighborhood (\(\mathcal{N}\)) to estimate regression function. Works
+when the dimensionality of the problem is small (\(\leq 4\)), and with
 dense training data (large \(N\)). In higher dimensions the
 neighbourhing data points will be very far, this phenomenon is called
 the <a href="20250303T210015--curse-of-dimentionality.html">Curse of Dimentionality</a>.
 </p>
 
-<p>
-This technique does not work well at the boundaries (extrapolation).
-</p>
 
 \begin{equation}
   \hat{f}(X) = Ave(Y|X \in \mathcal{N}(x))
 \end{equation}
-</div>
-</div>
-<div id="outline-container-org5a065bc" class="outline-2">
-<h2 id="org5a065bc"><span class="section-number-2">2.</span> Fails</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org683c1d1" class="outline-2">
+<h2 id="org683c1d1"><span class="section-number-2">1.</span> Fails</h2>
+<div class="outline-text-2" id="text-1">
 <ul class="org-ul">
-<li></li>
-
+<li>This technique does not work well at the boundaries (extrapolation).</li>
 <li>Typicall, it is good practice to estimate value of unknown point
 using 10% training data, that is to say that we need 10% of points
 in the neighbourhood.</li>
@@ -275,7 +265,7 @@ in the neighbourhood.</li>
 <div id="postamble" class="status">
 <p class="date">Date: 2025-03-02 Sun 18:52</p>
 <p class="author">Author: vj</p>
-<p class="date">Created: 2026-02-04 Wed 20:31</p>
+<p class="date">Created: 2026-02-05 Thu 09:01</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

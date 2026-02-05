@@ -4,3 +4,14 @@
 #+identifier: 20260204T202410
 
 
+The idea is very similar to [[denote:20250302T185233][Nearest neighbour averaging]].
+
+1. Take a neighborhood, \(\mathcal{N}\), around \(x_0\).
+2. Count class labels.
+3. The class label that counts the most will be used to label \(\hat{y}_0\)
+
+This has same problems as [[denote:20250302T185233][Nearest neighbour averaging]], the [[denote:20250303T210015][curse of
+dimentionality]]. As the number of dimensions increase the training
+data will become sparse.
+
+A widely used neighborhood algorithm is [[denote:20260205T073140][K-nearest neighbors]].

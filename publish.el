@@ -8,10 +8,11 @@
 (defun convert-denote-links-in-buffer (backend)
   "Convert denote: links to file: links during export without modifying source files."
   (goto-char (point-min))
-  ;; Find all denote links: [[denote:IDENTIFIER][Description]]
-  (while (re-search-forward "\\[\\[denote:\\([0-9T]+\\)\\]\\[\\([^]]+\\)\\]\\]" nil t)
+  ;; Find all denote links: [[denote:IDENTIFIER][Description]] or [[denote:IDENTIFIER::*Heading][Description]]
+  (while (re-search-forward "\\[\\[denote:\\([0-9T]+\\)\\(::.*?\\)?\\]\\[\\([^]]+\\)\\]\\]" nil t)
     (let* ((identifier (match-string 1))
-           (description (match-string 2))
+           (heading-search (match-string 2))  ; Optional ::*Heading or other search
+           (description (match-string 3))
            (base-dir (or (and (buffer-file-name)
                               (file-name-directory (buffer-file-name)))
                          default-directory))
@@ -20,7 +21,11 @@
       (when files
         (let ((target-file (car files)))
           ;; Replace denote link with file link in the buffer (temporary)
-          (replace-match (format "[[file:%s][%s]]" target-file description) t t))))))
+          ;; Include heading search if present
+          (replace-match (format "[[file:%s%s][%s]]"
+                                target-file
+                                (or heading-search "")
+                                description) t t))))))
 
 ;; Add the conversion function to org export hook
 (add-hook 'org-export-before-parsing-hook 'convert-denote-links-in-buffer)
