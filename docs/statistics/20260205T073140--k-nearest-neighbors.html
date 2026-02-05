@@ -3,10 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-02-05 Thu 19:11 -->
+<!-- 2026-02-05 Thu 18:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>K-nearest neighbors</title>
+<meta name="author" content="vj" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -232,7 +233,8 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9b5b40c">1. Training and testing error rates with \(K\)</a></li>
+<li><a href="#orge1001cf">1. Training and testing error rates with \(K\)</a></li>
+<li><a href="#org06a97ba">2. Decision boundary</a></li>
 </ul>
 </div>
 </div>
@@ -249,32 +251,58 @@ The algorithm is:
 <li>Count the occurrence of each class in this neighborhood.</li>
 <li>\(\hat{y}_0\) is given the label with the highest count.</li>
 </ol>
-<div id="outline-container-org9b5b40c" class="outline-2">
-<h2 id="org9b5b40c"><span class="section-number-2">1.</span> Training and testing error rates with \(K\)</h2>
+<div id="outline-container-orge1001cf" class="outline-2">
+<h2 id="orge1001cf"><span class="section-number-2">1.</span> Training and testing error rates with \(K\)</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-The K increases <a href="20260204T063317--classification.html#orgaa167ad">training error rate</a> the training error rate
-increases. At \(K=1\) the training error rate is the lowest.
+The K increases, the <a href="20260204T063317--classification.html#orgb2ce7dd">training error rate</a> increases. At \(K=1\) the
+training error rate is the lowest (overfits training data).
 </p>
 
 <p>
-The testing error however decreases with increasing \(K\), reaches
-a lowest point, and then again shoots up. When \(K=N\), all the test
-predictions will take the label of majority class in training data.
+But, the testing error decreases with increasing \(K\), reaches a lowest
+point, and then again shoots up. When \(K=N\), all the test predictions
+will take the label (majority class in training data).
 </p>
 
 
-<div id="org1fd13eb" class="figure">
+<div id="org47952a6" class="figure">
 <p><img src="./pics/K-nearest_neighbours_training_testing_error_rate_trend.png" alt="K-nearest_neighbours_training_testing_error_rate_trend.png" width="50%" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Training and testing error rate trend with \(K\)</p>
 </div>
 </div>
 </div>
+<div id="outline-container-org06a97ba" class="outline-2">
+<h2 id="org06a97ba"><span class="section-number-2">2.</span> Decision boundary</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The decision boundary is where a classifier decision changes
+from one class label to another.
+</p>
+
+<p>
+In the simulated example demonstrated below, the first image
+shows Bayes decision boundary. This is available to us only
+because we know the conditional probability (as the data
+is simulated). This Bayes decision boundary marks points where
+the probability of each class is \(0.5\).
+</p>
+
+
+
+<div id="org642f1ef" class="figure">
+<p><img src="./pics/ch2__k-nearest_neighbours.png" alt="ch2__k-nearest_neighbours.png" width="50%" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Decision boundary trend with \(K\)</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2026-02-05 Thu 07:31</p>
-<p class="date">Created: 2026-02-05 Thu 19:11</p>
+<p class="author">Author: vj</p>
+<p class="date">Created: 2026-02-05 Thu 18:35</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
