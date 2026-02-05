@@ -23,4 +23,5 @@ predictions will take the label of majority class in training data.
 
 #+CAPTION: Training and testing error rate trend with $K$
 #+NAME:   fig:knn-train-test-error-trend
+#+ATTR_HTML: :width 50%
 [[./pics/K-nearest_neighbours_training_testing_error_rate_trend.png]]
