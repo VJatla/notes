@@ -34,9 +34,9 @@ on training data, we call this /training error/ rate.
 A good classifier is one that has the least /test error/ rate. This is calculated
 similarly to training error rate on test data set.
 
-The best classifier that minimizes the test error rate is [[file:20260204T082247--optimal-bayes-classifier.org][optimal
-Bayes classifier]] This classifier requires conditional distribution of
-\(Y\) given \(X\), which is typically not available. Think of this as
+The best classifier that minimizes the test error rate is [[file:20260204T082247--bayes-optimal-classifier.org][Bayes
+optimal classifier]] This classifier requires conditional distribution
+of \(Y\) given \(X\), which is typically not available. Think of it as
 a golden standard that we want to attain in designing our classifier.
 
 

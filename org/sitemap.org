@@ -29,13 +29,14 @@
 - python
   - [[file:python/20240925T173709--special-methods__python.org][special methods]]
 - statistics
+  - [[file:statistics/20260204T082247--bayes-optimal-classifier.org][Bayes optimal classifier]]
   - [[file:statistics/20260204T063317--classification.org][classification]]
   - [[file:statistics/20250303T210015--curse-of-dimentionality.org][curse of dimentionality]]
   - [[file:statistics/20250227T072232--index__stats.org][index]]
   - [[file:statistics/20250307T074254--interpretability-vs-flexibility.org][interpretability vs flexibility]]
   - [[file:statistics/20250302T191540--linear-regression__parametric_regression.org][Linear regression]]
+  - [[file:statistics/20260204T202410--nearest-neighbor__classification.org][Nearest-neighbor]]
   - [[file:statistics/20250302T185233--nearest-neighbour-averaging__nonparametric_regression_smoothing.org][Nearest neighbour averaging]]
-  - [[file:statistics/20260204T082247--optimal-bayes-classifier.org][optimal bayes classifier]]
   - [[file:statistics/20250302T093253--regression.org][Regression]]
   - [[file:statistics/20250227T072155--supervised-learning__stats.org][Supervised learning]]
   - [[file:statistics/20250227T072623--unsupervised-learning.org][Unsupervised learning]]

@@ -4,5 +4,5 @@
 #+identifier: 20250302T191540
 #+HUGO_SECTION: statistics
 #+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
-#+hugo_custom_front_matter: :math true
+#+hugo_custom_front_matter: :math trueing
 

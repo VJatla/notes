@@ -6,7 +6,7 @@
 <!-- 2026-02-04 Wed 20:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>chakkara pongal</title>
+<title>Bayes optimal classifier</title>
 <meta name="author" content="vj" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -193,33 +193,84 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">chakkara pongal</h1>
+<h1 class="title">Bayes optimal classifier</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdb9a057">1. Chakkara pongal</a></li>
+<li><a href="#orgd34009b">1. Links</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdb9a057" class="outline-2">
-<h2 id="orgdb9a057"><span class="section-number-2">1.</span> Chakkara pongal</h2>
+<p>
+For this classifier we need conditional distribution of Y given
+X. Suppose there are \(K\) classes, \(1,2,3\dots,K\), and we
+know the conditional probability \(p_k(x)\).
+</p>
+
+\begin{equation}
+p_k(x) = Pr(Y=k|X=x), k = 1,2,3,\dots,K
+\end{equation}
+
+<p>
+The Bayes classifier assigns label \(j\) for prediction \(x\) if
+\(p_j(x)\) is the most probable label among  \(\{p_1(x), p_2(x),
+p_3(x),\dots,p_K(x)\}\).
+</p>
+
+\begin{equation}
+\hat{f}(x) = j \text{ if } p_j(x) = \max\{p_1(x), p_2(x), p_3(x),\dots,p_K(x)\}
+\end{equation}
+
+<p>
+In practice we do not have the conditional probabilities.
+</p>
+<div id="outline-container-orgd34009b" class="outline-2">
+<h2 id="orgd34009b"><span class="section-number-2">1.</span> Links</h2>
 <div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li>1/4th cup of moong dal (tasted until fragrant)</li>
-<li>3/4th cup rice</li>
-<li>2 cups water</li>
-<li>1.5 cups Jaggery (metlt with .5 cup water)</li>
-<li>Dry fruits as required (Cashew and raisins recommended)</li>
-</ul>
+<p>
+<a href="20260204T202410--nearest-neighbor__classification.html">Nearest-neighbor</a>
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2025-11-29 Sat 11:41</p>
+<p class="date">Date: 2026-02-04 Wed 08:22</p>
 <p class="author">Author: vj</p>
 <p class="date">Created: 2026-02-04 Wed 20:31</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
