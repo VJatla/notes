@@ -233,26 +233,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org43b5b61">1. Definition</a>
+<li><a href="#org6e864b7">1. Definition</a>
 <ul>
-<li><a href="#org3326c6d">1.1. Notes</a></li>
+<li><a href="#org96e2d8f">1.1. Notes</a></li>
 </ul>
 </li>
-<li><a href="#org32e7127">2. Ideal regression function</a></li>
-<li><a href="#org9c05326">3. Estimate regression function</a></li>
-<li><a href="#org0659fe7">4. Error</a>
+<li><a href="#orgb70d51a">2. Ideal regression function</a></li>
+<li><a href="#org8062d2c">3. Estimate regression function</a></li>
+<li><a href="#org42c15a5">4. Error</a>
 <ul>
-<li><a href="#org9185641">4.1. Irreducible error (\(\epsilon\))</a></li>
-<li><a href="#org024736b">4.2. Error of estimate \(\hat{f}(X)\)</a></li>
+<li><a href="#orgb7886cd">4.1. Irreducible error (\(\epsilon\))</a></li>
+<li><a href="#org5e2f78b">4.2. Error of estimate \(\hat{f}(X)\)</a></li>
 </ul>
 </li>
-<li><a href="#org042ef55">5. Nonparametric regression</a></li>
-<li><a href="#org351cef2">6. Parametric regression</a></li>
+<li><a href="#org1b7ed2c">5. Nonparametric regression</a></li>
+<li><a href="#orgf9212f1">6. Parametric regression</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org43b5b61" class="outline-2">
-<h2 id="org43b5b61"><span class="section-number-2">1.</span> Definition</h2>
+<div id="outline-container-org6e864b7" class="outline-2">
+<h2 id="org6e864b7"><span class="section-number-2">1.</span> Definition</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We have output variable \(Y\) and vector of \(p\) independent input
@@ -285,8 +285,8 @@ Y = f(X) + \epsilon
 The goal here is to estimate \(f\).
 </p>
 </div>
-<div id="outline-container-org3326c6d" class="outline-3">
-<h3 id="org3326c6d"><span class="section-number-3">1.1.</span> Notes</h3>
+<div id="outline-container-org96e2d8f" class="outline-3">
+<h3 id="org96e2d8f"><span class="section-number-3">1.1.</span> Notes</h3>
 <div class="outline-text-3" id="text-1-1">
 <ol class="org-ol">
 <li>An instance of \(X\) is prepresented using \(x\).</li>
@@ -314,7 +314,7 @@ An instance of \(x\) may have multiple values of \(y\).
 </p>
 
 
-<div id="org7a14c2e" class="figure">
+<div id="org29aa99f" class="figure">
 <p><img src="pics/regression_multiple_y_at_x.png" alt="regression_multiple_y_at_x.png" width="600px" />
 </p>
 <p><span class="figure-number">Figure 1: </span>At an instance of \(x\) we may have multiple \(y$\) values.</p>
@@ -323,8 +323,8 @@ An instance of \(x\) may have multiple values of \(y\).
 </div>
 </div>
 </div>
-<div id="outline-container-org32e7127" class="outline-2">
-<h2 id="org32e7127"><span class="section-number-2">2.</span> Ideal regression function</h2>
+<div id="outline-container-orgb70d51a" class="outline-2">
+<h2 id="orgb70d51a"><span class="section-number-2">2.</span> Ideal regression function</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 An ideal \(f(X)\) at \(X = x\) with regard to mean-squared perdiction
@@ -334,7 +334,7 @@ will not have data at every \(X = x\).
 </p>
 
 
-<div id="orgb78e23e" class="figure">
+<div id="org232e076" class="figure">
 <p><img src="./pics/regression_ideal_fx_annotatied.png" alt="regression_ideal_fx_annotatied.png" width="600px" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Ideal \(f(X)\). (<a href="scripts/regression_plot.py">code</a>)</p>
@@ -349,8 +349,8 @@ f(X) = E(Y|X_1 = x_1, X_2 = x_2, \dots, X_p = x_p)
 \end{equation}
 </div>
 </div>
-<div id="outline-container-org9c05326" class="outline-2">
-<h2 id="org9c05326"><span class="section-number-2">3.</span> Estimate regression function</h2>
+<div id="outline-container-org8062d2c" class="outline-2">
+<h2 id="org8062d2c"><span class="section-number-2">3.</span> Estimate regression function</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 An estimate of \(f(X)\) using data is represented using <i>"hat"</i>,
@@ -358,12 +358,12 @@ An estimate of \(f(X)\) using data is represented using <i>"hat"</i>,
 </p>
 </div>
 </div>
-<div id="outline-container-org0659fe7" class="outline-2">
-<h2 id="org0659fe7"><span class="section-number-2">4.</span> Error</h2>
+<div id="outline-container-org42c15a5" class="outline-2">
+<h2 id="org42c15a5"><span class="section-number-2">4.</span> Error</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org9185641" class="outline-3">
-<h3 id="org9185641"><span class="section-number-3">4.1.</span> Irreducible error (\(\epsilon\))</h3>
+<div id="outline-container-orgb7886cd" class="outline-3">
+<h3 id="orgb7886cd"><span class="section-number-3">4.1.</span> Irreducible error (\(\epsilon\))</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 \(\epsilon = Y - f(X)\) is the irreducible error. Even tho, we know
@@ -373,15 +373,15 @@ values at each \(X=x\).
 </p>
 
 
-<div id="orgf26a4dd" class="figure">
+<div id="org2d43d37" class="figure">
 <p><img src="./pics/regression_epsilon.png" alt="regression_epsilon.png" width="600px" />
 </p>
 <p><span class="figure-number">Figure 3: </span>The unavoidable error, \(\epsilon\).</p>
 </div>
 </div>
 </div>
-<div id="outline-container-org024736b" class="outline-3">
-<h3 id="org024736b"><span class="section-number-3">4.2.</span> Error of estimate \(\hat{f}(X)\)</h3>
+<div id="outline-container-org5e2f78b" class="outline-3">
+<h3 id="org5e2f78b"><span class="section-number-3">4.2.</span> Error of estimate \(\hat{f}(X)\)</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 The sum of squared error when using the estimate \(\hat{f}(X)\) can be
@@ -400,16 +400,16 @@ irreducible error.
 </div>
 </div>
 </div>
-<div id="outline-container-org042ef55" class="outline-2">
-<h2 id="org042ef55"><span class="section-number-2">5.</span> Nonparametric regression</h2>
+<div id="outline-container-org1b7ed2c" class="outline-2">
+<h2 id="org1b7ed2c"><span class="section-number-2">5.</span> Nonparametric regression</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><a href="20250302T185233--nearest-neighbour-averaging__nonparametric_regression_smoothing.html">Nearest neighbour</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org351cef2" class="outline-2">
-<h2 id="org351cef2"><span class="section-number-2">6.</span> Parametric regression</h2>
+<div id="outline-container-orgf9212f1" class="outline-2">
+<h2 id="orgf9212f1"><span class="section-number-2">6.</span> Parametric regression</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><a href="20250302T191540--linear-regression__parametric_regression.html">Linear regression</a></li>

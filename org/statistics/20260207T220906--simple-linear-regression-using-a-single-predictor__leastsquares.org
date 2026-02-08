@@ -7,7 +7,9 @@ Assuming the response, $Y$, depends on the predictor, $X$, linearly we can
 model the relation using
 
 $$
+\begin{equation}
     Y = \beta_0 + \beta_1 X + \epsilon \tag{1}
+\end{equation}
 $$
 
 Using training data we estimate the coefficients $\hat{\beta}_0$ and

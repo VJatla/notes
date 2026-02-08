@@ -233,8 +233,8 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3f0e111">1. Estimating of parameters using least squares</a></li>
-<li><a href="#org07b757f">2. How good is our estimate?</a></li>
+<li><a href="#orgf7815ad">1. Estimating of parameters using least squares</a></li>
+<li><a href="#orgef17088">2. How good is our estimate?</a></li>
 </ul>
 </div>
 </div>
@@ -244,9 +244,13 @@ model the relation using
 </p>
 
 <p>
-\[
+$$
+</p>
+\begin{equation}
     Y = \beta_0 + \beta_1 X + \epsilon \tag{1}
-\]
+\end{equation}
+<p>
+$$
 </p>
 
 <p>
@@ -258,8 +262,8 @@ we can calculate an estimate of \(y\) (\(\hat{y}\))using,
 \begin{equation}
 \hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x \tag{2}
 \end{equation}
-<div id="outline-container-org3f0e111" class="outline-2">
-<h2 id="org3f0e111"><span class="section-number-2">1.</span> Estimating of parameters using least squares</h2>
+<div id="outline-container-orgf7815ad" class="outline-2">
+<h2 id="orgf7815ad"><span class="section-number-2">1.</span> Estimating of parameters using least squares</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Given training data, \(\{(x_1,y_1), (x_2,y_2), \ldots, (x_n, y_n)\}\), we want to
@@ -296,8 +300,8 @@ where \(\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i\) (the sample mean of \(y\)) an
 </p>
 </div>
 </div>
-<div id="outline-container-org07b757f" class="outline-2">
-<h2 id="org07b757f"><span class="section-number-2">2.</span> How good is our estimate?</h2>
+<div id="outline-container-orgef17088" class="outline-2">
+<h2 id="orgef17088"><span class="section-number-2">2.</span> How good is our estimate?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 We do not know the true slope coefficient, \(\beta_1\). However, we can
