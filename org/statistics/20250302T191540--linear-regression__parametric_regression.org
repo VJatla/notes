@@ -6,3 +6,8 @@
 #+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
 #+hugo_custom_front_matter: :math trueing
 
+Assumes that the dependence of $Y$ on $X = \{X_1, X_2, X_3, \dots, X_p\}$ is linear.
+
+** Important links
+
+- [[denote:20260207T220906][simple linear regression using a single predictor]]

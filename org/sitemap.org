@@ -39,5 +39,6 @@
   - [[file:statistics/20260204T202410--nearest-neighbor__classification.org][Nearest-neighbor]]
   - [[file:statistics/20250302T185233--nearest-neighbour-averaging__nonparametric_regression_smoothing.org][Nearest neighbour averaging]]
   - [[file:statistics/20250302T093253--regression.org][Regression]]
+  - [[file:statistics/20260207T220906--simple-linear-regression-using-a-single-predictor__leastsquares.org][simple linear regression using a single predictor]]
   - [[file:statistics/20250227T072155--supervised-learning__stats.org][Supervised learning]]
   - [[file:statistics/20250227T072623--unsupervised-learning.org][Unsupervised learning]]
