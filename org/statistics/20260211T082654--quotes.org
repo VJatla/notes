@@ -1,0 +1,16 @@
+#+title:      quotes
+#+date:       [2026-02-11 Wed 08:26]
+#+filetags:   
+#+identifier: 20260211T082654
+
+#+begin_quote
+Essentially, all models are wrong, but some are useful.
+-- George Box
+#+end_quote
+
+#+begin_quote
+The only way to find out what will happen when a complex system is
+disturbed is to disturb the system, not merely to observe it
+passively.
+-- Fred Mosteller and John Tukey, paraphrasing George Box
+#+end_quote

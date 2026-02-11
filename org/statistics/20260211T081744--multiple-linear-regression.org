@@ -1,0 +1,22 @@
+#+title:      multiple linear regression
+#+date:       [2026-02-11 Wed 08:17]
+#+filetags:   
+#+identifier: 20260211T081744
+
+Let there be \( p \) predictors. We model the response, \( Y \), as 
+
+\begin{equation}
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p + \epsilon \tag{1}
+\end{equation}
+
+In an ideal scenario the predictors are uncorrelated. This allows us to
+make causal statements like, a certain change in \(X_j\) will result in
+a certain change in \(Y\).
+
+But, in practice this is not the case and the predictors are correlated. This causes
+
+- The variance of all the coefficients to increase, sometime dramatically.
+- Interpretation becomes hazardous. When \(X_j\) changes, everything else changes.
+
+Hence, the claims of causality should be avoided for observational data.
+
