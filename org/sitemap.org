@@ -9,6 +9,7 @@
   - [[file:cooking_recepies/20250713T172128--arachuvitta-sambar.org][arachuvitta sambar]]
   - [[file:cooking_recepies/20250614T033632--chaddi-annam.org][chaddi annam]]
   - [[file:cooking_recepies/20251129T114128--chakkara-pongal.org][chakkara pongal]]
+  - [[file:cooking_recepies/20260221T165827--hotel-style-tiffin-sambar__vismaifood.org][hotel style tiffin sambar]]
   - [[file:cooking_recepies/20250607T194127--kichidi.org][kichidi]]
   - [[file:cooking_recepies/20250830T145321--low-fodmap-foods.org][low FODMAP foods]]
   - [[file:cooking_recepies/20250610T030758--wamu-annam.org][wamu annam]]
