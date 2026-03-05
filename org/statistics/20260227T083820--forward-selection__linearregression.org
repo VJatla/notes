@@ -1,0 +1,22 @@
+#+title:      forward selection
+#+date:       [2026-02-27 Fri 08:38]
+#+filetags:   :linearregression:
+#+identifier: 20260227T083820
+
+1. Begin with the **null model** (\(M_0: y = \bar{y}\)), which
+   contains no predictors.
+
+2. In step 1, fit all \(p\) simple regressions (\(y = \beta_0 +
+   \beta_j x_j\)) and select the predictor that provides the
+   greatest improvement in fit, indicated by the largest reduction
+   in Residual Sum of Squares (RSS).
+
+3. In step \(k\) (where \(k \geq 2\)), based on the current model,
+   evaluate each remaining predictor one at a time and choose the one
+   that yields the most significant improvement in fit.
+
+4. Update the model by incorporating this new predictor and
+   continue to step 3.
+
+5. Terminate the process when no remaining predictor offers a
+   meaningful enhancement.

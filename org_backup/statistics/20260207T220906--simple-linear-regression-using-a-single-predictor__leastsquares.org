@@ -1,0 +1,88 @@
+#+title:      simple linear regression using a single predictor
+#+date:       [2026-02-07 Sat 22:09]
+#+filetags:   :leastsquares:
+#+identifier: 20260207T220906
+
+Assuming the response, $Y$, depends on the predictor, $X$, linearly we can
+model the relation using
+
+\begin{equation}
+    Y = \beta_0 + \beta_1 X + \epsilon \tag{1}
+\end{equation}
+
+
+Using training data we estimate the coefficients $\hat{\beta}_0$ and
+$\hat{\beta}_1$. Using these estimates, at a given test predictor $x$
+we can calculate an estimate of $y$ ($\hat{y}$)using,
+
+\begin{equation}
+\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x \tag{2}
+\end{equation}
+
+
+** Estimating of parameters using least squares
+
+Given training data, $\{(x_1,y_1), (x_2,y_2), \ldots, (x_n, y_n)\}$, we want to
+build a linear model such that the residual sum of squares (RSS) is minimized.
+
+The residual for the $i^{th}$ observation is given by $e_i = y_i -
+\hat{y}_i$. The Residual Sum of Squares (RSS) is defined as:
+
+\begin{align}
+\text{RSS} &= \sum_{i=1}^{n} e_i^2 \tag{3.1}\\
+&= \sum_{i=1}^{n} (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2 \tag{3.2}
+\end{align}
+
+We aim to minimize the Residual Sum of Squares (hence the name **Least
+Squares**) to find the optimal values of $\hat{\beta}_0$ and
+$\hat{\beta}_1$.
+
+The optimal estimates of $\hat{\beta}_0$ and $\hat{\beta}_1$, given a training sample are
+
+\begin{align}
+\hat{\beta}_1 &= \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^{n} (x_i - \bar{x})^2} \tag{4.1}\\
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x} \tag{4.2}
+\end{align}
+
+where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$ (the sample mean of $y$) and $\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$ (the sample mean of $x$).
+
+
+** How good is our parameter estimate?
+
+We do not know the true slope coefficient, $\beta_1$. However, we can
+calculate the standard error (SE) of the estimate (assuming repeated
+sampling), $\hat{\beta}_1$, using the formula:
+
+
+\begin{align}
+SE(\hat{\beta}_1) &= \sqrt{\frac{\sigma^2}{\sum_{i=1}^{n} (x_i - \bar{x})^2}} \tag{5.1} \\
+\sigma^2 &= Var(\epsilon) \tag{5.2}
+\end{align}
+
+From the formula we can see that,
+- As the variance of the population error increases, the $SE$
+  increases. This in turn increases the estimation of error in
+  $\hat{\beta_1}$.
+- As the spread of data (denominator) increases the $SE$ in estimation
+  $\hat{\beta_1}$ decreases.  This means the more spread the data in
+  $x$, the better.
+
+Under repeated sampling, assuming that $SE$ of $\hat{\beta}_1$ follows a
+Gaussian distribution, we can say that the true value $\beta_1$ has a
+95% probability to be in the interval $[\hat{\beta}_1 - 2 \,
+SE(\hat{\beta}_1), \hat{\beta}_1 + 2 \, SE(\hat{\beta}_1)]$.
+
+** How well did our linear fit do?
+
+We can answer this question by calculating $R^2$ value.
+
+\begin{align}
+RSS &= \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \\
+TSS &= \sum_{i=1}^{n} (y_i - \bar{y})^2 \\
+R^2 &= \frac{TSS - RSS}{TSS}
+    &= 1 - \frac{RSS}{TSS}
+\end{align}
+
+$R^2$ denotes the propotion of variance in $Y$ that is explained by
+$X$ in the regression model. A value of 0, implies nothing is
+explained, and a value of 1 means the data lies exactly on the line.

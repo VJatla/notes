@@ -1,0 +1,27 @@
+#+title:      Nearest neighbour averaging
+#+date:       [2025-03-02 Sun 18:52]
+#+filetags:   :nonparametric:regression:smoothing:
+#+identifier: 20250302T185233
+#+HUGO_SECTION: statistics
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+#+hugo_custom_front_matter: :math true
+
+This is one of the smoothing methods. It uses data in the
+neighborhood ($\mathcal{N}$) to estimate regression function. Works
+when the dimensionality of the problem is small (\(\leq 4\)), and with
+dense training data (large $N$). In higher dimensions the
+neighbourhing data points will be very far, this phenomenon is called
+the [[file:20250303T210015--curse-of-dimentionality.org][Curse of Dimentionality]].
+
+
+\begin{equation}
+  \hat{f}(X) = Ave(Y|X \in \mathcal{N}(x))
+\end{equation}
+
+* Fails
+
+- This technique does not work well at the boundaries (extrapolation).
+- Typicall, it is good practice to estimate value of unknown point
+  using 10% training data, that is to say that we need 10% of points
+  in the neighbourhood.
+  

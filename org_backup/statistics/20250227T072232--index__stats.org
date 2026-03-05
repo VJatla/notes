@@ -1,0 +1,31 @@
+#+title:      index
+#+date:       [2025-02-27 Thu 07:22]
+#+filetags:   :stats:
+#+identifier: 20250227T072232
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+#+HUGO_SECTION: statistics
+#+EXPORT_FILE_NAME: _index
+#+hugo_custom_front_matter: :math true
+
+* Overview
+
+** Q & A
+
+- How is Statistical Learning different from Machine Learning?
+
+  The concepts, ideas and techniques used in both of them are very
+  similar.
+    #+BEGIN_QUOTE
+    Statistical learning also worries about prediction but also
+    tries to come up with models, methods that can be interpreted by
+    scientists and others.  And also by how well the method is doing.We
+    worry more about precision and uncertainty. --ISLP (Ch1, 1.2
+    Examples and Framework)
+    #+END_QUOTE
+
+
+
+* Links
+
+- [[file:20250227T072155--supervised-learning__stats.org][Supervised learning]]
+- [[file:20250227T072623--unsupervised-learning.org][Unsupervised learning]]

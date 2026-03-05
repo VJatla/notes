@@ -1,0 +1,50 @@
+#+title:      classification
+#+date:       [2026-02-04 Wed 06:33]
+#+filetags:   
+#+identifier: 20260204T063317
+
+* Classification
+
+The response variable \(Y\) is qualitative. The goal here is to, build
+a classifier that assigns a label for unlabeled observation. In
+addition it is also important to study uncertainty in each classification
+and understand the role of different predictors.
+
+A well known example of classification problem is the hand written digits
+classification (MNIST dataset).
+
+** Error rate
+
+Suppose we try to estimate \(f\) on the basis of training observations
+\(\{(x_1,y_), (x_2, y_2),\dots(x_n,y_n)\}\), where \(y_1, y_2, \dots, y_n\)
+are qualitative, the most common way of quantifying the
+performance of our classification estimate (\(\hat{f}\)) is to check
+the number of miss classifications.
+
+
+\begin{equation}
+\frac{1}{n}\sum_{i=1}^{n} I(y_i \neq \hat{y}_i)
+\end{equation}
+
+
+Here \(\hat{y}_i\) is the label predicted by our estimate \(\hat{f}\) and \(I(y_i \neq \hat{y}_i)\) is indicator
+variable that equals to 1 if \(y_i = \hat{y}_i\), else 0, for observation \(i\). Since this is
+on training data, we call this /training error/ rate.
+
+A good classifier is one that has the least /test error/ rate. This is calculated
+similarly to training error rate on test data set.
+
+The best classifier that minimizes the test error rate is [[file:20260204T082247--bayes-optimal-classifier.org][Bayes
+optimal classifier]] This classifier requires conditional distribution
+of \(Y\) given \(X\), which is typically not available. Think of it as
+a golden standard that we want to attain in designing our classifier.
+
+
+
+
+
+
+
+  
+
+

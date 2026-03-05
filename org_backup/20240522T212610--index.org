@@ -1,0 +1,16 @@
+#+TITLE: index
+#+date:       [2024-05-22 Wed 21:26]
+#+filetags:
+#+identifier: 20240522T212610
+#+EXPORT_FILE_NAME: index
+
+* Introduction
+
+
+This website hosts my notes. After trying various tools to host my
+notes, I am using the most simple one. I recollect the quote from
+slackware, /"Keep It Simple, Stupid."/.
+
+[[file:sitemap.org][sitemap]]
+
+

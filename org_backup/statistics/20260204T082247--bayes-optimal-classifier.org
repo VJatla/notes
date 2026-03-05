@@ -1,0 +1,25 @@
+#+title:      Bayes optimal classifier
+#+date:       [2026-02-04 Wed 08:22]
+#+filetags:   
+#+identifier: 20260204T082247
+
+For this classifier we need conditional distribution of Y given
+X. Suppose there are \(K\) classes, \(1,2,3\dots,K\), and we
+know the conditional probability \(p_k(x)\).
+
+\begin{equation}
+p_k(x) = Pr(Y=k|X=x), k = 1,2,3,\dots,K
+\end{equation}
+
+The Bayes classifier assigns label \(j\) for prediction \(x\) if
+\(p_j(x)\) is the most probable label among  \(\{p_1(x), p_2(x),
+p_3(x),\dots,p_K(x)\}\).
+
+\begin{equation}
+\hat{f}(x) = j \text{ if } p_j(x) = \max\{p_1(x), p_2(x), p_3(x),\dots,p_K(x)\}
+\end{equation}
+
+In practice we do not have the conditional probabilities.
+
+** Links
+[[denote:20260204T202410][Nearest-neighbor]]

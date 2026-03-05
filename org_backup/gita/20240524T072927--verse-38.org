@@ -1,0 +1,27 @@
+#+title:      verse 38
+#+date:       [2024-05-24 Fri 07:29]
+#+identifier: 20240524T072927
+#+filetags:   :gita:
+#+OPTIONS: \n:t
+#+HUGO_SECTION: gita
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+
+* Verse
+
+सुखदु:खे समे कृत्वा लाभालाभौ जयाजयौ |
+ततो युद्धाय युज्यस्व नैवं पापमवाप्स्यसि || 38||
+
+* Short translation
+
+Then, treating alike pleasure and pain, gain and loss, success and
+defeat, prepare for the battle, and thus wilt thou not incur sin.
+
+* My notes
+
+Krishna tells Arjuna that as long as his actions are motivated by his
+commitment to his duties he will not incur sin. Do the right thing and
+merit is guaranteed for you.
+
+Here Krishna is saying that the normal way of thinking where success
+leads to gain and pleasure, while defeat leads to pain and loss, is
+self-centered. Doing your Svadharma (स्वधर्म) will always leads to merit.

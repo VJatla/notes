@@ -1,0 +1,18 @@
+#+title:      special methods
+#+date:       [2024-09-25 Wed 17:37]
+#+filetags:   :python:
+#+identifier: 20240925T173709
+#+HUGO_SECTION: python
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+#+OPTIONS: \n:t
+
+* Special methods
+
+The special methods make user defined objects behave as built in
+types. Using them makes the code more /"Pythonic"/. A basic
+requirement of Python object is to provide usable string
+representaiton using ~__repr__~ and ~__str__~.
+
+/??? Is this correct?/
+- ~__repr__~: Used for debugging.
+- ~__str__~: Used for presentation to the end user.

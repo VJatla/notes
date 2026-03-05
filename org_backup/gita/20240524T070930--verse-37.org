@@ -1,0 +1,42 @@
+#+title:      verse 37
+#+date:       [2024-05-24 Fri 07:09]
+#+filetags:
+#+identifier: 20240524T070930
+#+filetags:   :gita:
+#+OPTIONS: \n:t
+#+HUGO_SECTION: gita
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+
+
+* Verse
+
+हतो वा प्राप्स्यसि स्वर्गं जित्वा वा भोक्ष्यसे महीम् |
+तस्मादुत्तिष्ठ कौन्तेय युद्धाय कृतनिश्चय: || 37||
+
+* Short translation
+
+Killed, thou wilt reach heaven; victorious, thou wilt enjoy the
+earth. Wherefore, O son of Kunti, arise, resolved to fight.
+
+* My notes
+
+The power of perspective is shown here. Arjuna came to war thinking,
+/"I am going to punish the wrong doers, win my rightful kingdom"/. Here,
+the motivation is self centered. This shocked him, when he realized that
+for his benefit he will be killing so many of his relatives.
+
+But, here Krishna puts it in the perspective of duty. He is a warrior,
+according to the role assigned to him, he has to protect society from
+wrong doers. If he sees the action from this perspective the war is
+the right thing to do.
+
+The perspective Krishna is proposing is, /"I am going to punish the
+wrong doers, because it will lead to a Just and happy society. As a person
+born in warrior class, this is my duty."/
+
+This perspective, on losing (death), gives him other worldly
+benefits. On winning he gets his rightful kingdom.
+
+** Gist
+
+Motivation of an action should not be self-centered.

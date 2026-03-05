@@ -30,10 +30,13 @@
 - python
   - [[file:python/20240925T173709--special-methods__python.org][special methods]]
 - statistics
+  - [[file:statistics/20260227T083912--backward-selection__linearregression.org][backward selection]]
   - [[file:statistics/20260204T082247--bayes-optimal-classifier.org][Bayes optimal classifier]]
   - [[file:statistics/20260204T063317--classification.org][classification]]
   - [[file:statistics/20250303T210015--curse-of-dimentionality.org][curse of dimentionality]]
+  - [[file:statistics/20260227T083820--forward-selection__linearregression.org][forward selection]]
   - [[file:statistics/20250227T072232--index__stats.org][index]]
+  - [[file:statistics/20260303T080536--interaction-effect__linearregression.org][interaction effect]]
   - [[file:statistics/20250307T074254--interpretability-vs-flexibility.org][interpretability vs flexibility]]
   - [[file:statistics/20260205T073140--k-nearest-neighbors.org][K-nearest neighbors]]
   - [[file:statistics/20250302T191540--linear-regression__parametric_regression.org][Linear regression]]
@@ -45,3 +48,5 @@
   - [[file:statistics/20260207T220906--simple-linear-regression-using-a-single-predictor__leastsquares.org][simple linear regression using a single predictor]]
   - [[file:statistics/20250227T072155--supervised-learning__stats.org][Supervised learning]]
   - [[file:statistics/20250227T072623--unsupervised-learning.org][Unsupervised learning]]
+- web3
+  - [[file:web3/20260304T022818--nft.org][NFT]]

@@ -1,0 +1,41 @@
+#+title:      interaction effect
+#+date:       [2026-03-03 Tue 08:05]
+#+filetags:   :linearregression:
+#+identifier: 20260303T080536
+
+* Interaction effect
+
+In multiple linear regression, it is assumed that the relationship
+between the response variable and the predictor variables is additive. But,
+in reality that is not the case.
+
+The standard linear model with two variables is
+
+\begin{equation}
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2
+\end{equation}
+
+The influence of \(X_1\) on \(Y\) is determined solely by \(\beta_1\),
+regardless  of  \(X_2\). However,  what  happens  when the  effect  of
+\(X_1\) varies with \(X_2\)? For  instance, the glucose spike response
+is affected not  only by the quantity  (in grams) of dal  and rice but
+also by  whether they  are consumed together,  leading to  a different
+response.
+
+To tackle this issue, we can introduce a new predictor, which is the
+product of \( X_1 \) and \( X_2 \), along with an associated
+coefficient.
+
+\begin{equation}
+\( Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 (X_1 X_2) \)
+\end{equation}
+
+
+Rewriting this provides a simpler interpretation,
+
+\begin{equation}
+Y = \beta_0 + (\beta_1 + \beta_3 X_2) X_1 + \beta_2 X_2
+\end{equation}
+
+
+This equation indicates that the contribution of \(X_1\) depends on the value of \(X_2\).

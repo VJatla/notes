@@ -1,0 +1,12 @@
+#+title:      Unsupervised learning
+#+date:       [2025-02-27 Thu 07:26]
+#+filetags:
+#+identifier: 20250227T072623
+#+HUGO_SECTION: statistics
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+#+hugo_custom_front_matter: :math true
+
+* Unsupervised learning
+
+Learning paradigm in which a system finds relations (these relations
+can be patters, features, structures, etc) in the *unlabeled data*.

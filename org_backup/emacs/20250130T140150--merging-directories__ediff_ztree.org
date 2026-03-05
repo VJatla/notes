@@ -1,0 +1,31 @@
+#+title:      merging directories
+#+date:       [2025-01-30 Thu 14:01]
+#+filetags:   :ediff:ztree:
+#+identifier: 20250130T140150
+#+OPTIONS: \n:t
+#+HUGO_SECTION: emacs
+#+HUGO_BASE_DIR: ~/Dropbox/notes/hugo-notes/
+
+
+Start directory comparison using ~ztree-diff~ command. Once you find
+the file with changes you can hit enter and go to ~ediff~ mode.
+
+** Ztree-diff commands
+
+| Key binding | Command     |
+|-------------+-------------|
+| C           | Copy file   |
+| Tab         |             |
+| D           | Delete file |
+
+** ediff commands
+
+| Key binding | Command                         |
+|-------------+---------------------------------|
+| n           | next difference                 |
+| p           | previous difference             |
+| a           | Copy changes from buffer a to b |
+| b           | Copy changes from buffer b to a |
+| wa          | Write buffer a changes to file  |
+| wb          | Write buffer b changes to file  |
+| ?           | Toggle help                     |
