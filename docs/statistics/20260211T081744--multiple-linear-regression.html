@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-03-05 Thu 07:53 -->
+<!-- 2026-05-27 Wed 12:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>multiple linear regression</title>
@@ -233,11 +233,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org82ce621">1. Is at least one predictor useful?</a></li>
-<li><a href="#orgbc77eba">2. What are important predictors?</a></li>
-<li><a href="#orgd4a99dd">3. How to deal with categorical variables?</a></li>
-<li><a href="#org0a63c30">4. Interaction effect</a></li>
-<li><a href="#org933e816">5. Non-linear effects of predictors</a></li>
+<li><a href="#org55b30db">1. Is at least one predictor useful?</a></li>
+<li><a href="#org9dd2ed0">2. What are important predictors?</a></li>
+<li><a href="#orgf9d2d2a">3. How to deal with categorical variables?</a></li>
+<li><a href="#orge33e001">4. Interaction effect</a></li>
+<li><a href="#org86f4eff">5. Non-linear effects of predictors</a></li>
 </ul>
 </div>
 </div>
@@ -267,8 +267,8 @@ But, in practice this is not the case and the predictors are correlated. This ca
 <p>
 Hence, the claims of causality should be avoided for observational data.
 </p>
-<div id="outline-container-org82ce621" class="outline-2">
-<h2 id="org82ce621"><span class="section-number-2">1.</span> Is at least one predictor useful?</h2>
+<div id="outline-container-org55b30db" class="outline-2">
+<h2 id="org55b30db"><span class="section-number-2">1.</span> Is at least one predictor useful?</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We can determine this using <b>F-statistic</b>.
@@ -288,8 +288,8 @@ The \(\frac{RSS}{n - p - 1}\) captures the residual per each degree of freedom.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbc77eba" class="outline-2">
-<h2 id="orgbc77eba"><span class="section-number-2">2.</span> What are important predictors?</h2>
+<div id="outline-container-org9dd2ed0" class="outline-2">
+<h2 id="org9dd2ed0"><span class="section-number-2">2.</span> What are important predictors?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 For a small number of predictors, \(P\), it is easy to compute performance of models
@@ -302,8 +302,8 @@ A smart way of doing this is using <a href="20260227T083820--forward-selection__
 </p>
 </div>
 </div>
-<div id="outline-container-orgd4a99dd" class="outline-2">
-<h2 id="orgd4a99dd"><span class="section-number-2">3.</span> How to deal with categorical variables?</h2>
+<div id="outline-container-orgf9d2d2a" class="outline-2">
+<h2 id="orgf9d2d2a"><span class="section-number-2">3.</span> How to deal with categorical variables?</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Dummy variables are used to handle categorical variables. If a
@@ -317,8 +317,8 @@ The \(K-1\) is required to avoid <i>perfect multicollinearity</i>.
 </p>
 </div>
 </div>
-<div id="outline-container-org0a63c30" class="outline-2">
-<h2 id="org0a63c30"><span class="section-number-2">4.</span> Interaction effect</h2>
+<div id="outline-container-orge33e001" class="outline-2">
+<h2 id="orge33e001"><span class="section-number-2">4.</span> Interaction effect</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 In multiple linear regression, it is assumed that the relationship
@@ -327,8 +327,8 @@ in reality that is not the case. More details can be found at <a href="20260303T
 </p>
 </div>
 </div>
-<div id="outline-container-org933e816" class="outline-2">
-<h2 id="org933e816"><span class="section-number-2">5.</span> Non-linear effects of predictors</h2>
+<div id="outline-container-org86f4eff" class="outline-2">
+<h2 id="org86f4eff"><span class="section-number-2">5.</span> Non-linear effects of predictors</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Standard linear regression assumes straight line relationship between
@@ -356,7 +356,7 @@ Y = \hat{\beta}_0 + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_1^2 + \hat{\beta}_3 X_1^
 <div id="postamble" class="status">
 <p class="date">Date: 2026-02-11 Wed 08:17</p>
 <p class="author">Author: vj</p>
-<p class="date">Created: 2026-03-05 Thu 07:53</p>
+<p class="date">Created: 2026-05-27 Wed 12:37</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
