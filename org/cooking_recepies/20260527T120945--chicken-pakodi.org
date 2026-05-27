@@ -1,0 +1,38 @@
+#+title:      chicken pakodi
+#+date:       [2026-05-27 Wed 12:09]
+#+filetags:   
+#+identifier: 20260527T120945
+
+* Chicken pakodi (street style)
+
+** Masala
+
+Add all these and mix well
+
+#+begin_src bash
+	500g chicken           + salt to taste + 1/4 tsp turmeric power +
+	1/2 slcie lemon juice  + 2 tsp red chilli powder + 1/2 tsp  cumin power +
+	1 tsp corriander powder + 1/2 tsp pepper power + 2 tsp garam masala +
+	2 tsp ginger garlic paste 
+#+end_src
+
+** Flour coating
+
+Mix these in, add water for consistency. It should be sticking to the chicken peaces.
+
+#+begin_src bash
+  1 Tbsp corn flour + 1 Tbsp rice flour + 2 Tbsp Gram flour 
+#+end_src
+
+** Garnishes
+
+Mix in chopped green chili, chopped mint leaves, chopped curry leaves, chopped corriander leaves + 1 Tbsp oil
+
+** Rest
+
+1 hour outside, or 30 minutes in fridge.
+
+
+** Deep fry (or shallow fry)
+
+Cook in medium-high heat.
