@@ -5,13 +5,13 @@
 
 A tool to dynamically manage shell environment.
 
-| Command                                 | Function                                                    |
-|-----------------------------------------+-------------------------------------------------------------|
-| module *spider* <software package name> | Gives details of software package.                          |
-| module *avail*                          | List all software packages available.                       |
-| module *load* <software package name>   | Loads software package and all its dependencies.            |
-| module *list*                           | Lists all the modules that are loaded in shell environment. |
-| module *unload* <software package name> | Unload a software package. Does not remove dependencies.    |
-| module *purge*                          | Remove all loaded modules.                                  |
-|                                         |                                                             |
+| Command                                   | Function                                                    |
+|-------------------------------------------+-------------------------------------------------------------|
+| module *spider* ~<software package name>~ | Gives details of software package.                          |
+| module *avail*                            | List all software packages available.                       |
+| module *load* ~<software package name>~   | Loads software package and all its dependencies.            |
+| module *list*                             | Lists all the modules that are loaded in shell environment. |
+| module *unload* ~<software package name>~ | Unload a software package. Does not remove dependencies.    |
+| module *purge*                            | Remove all loaded modules.                                  |
+|                                           |                                                             |
 
