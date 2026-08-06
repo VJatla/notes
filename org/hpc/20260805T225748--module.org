@@ -1,7 +1,8 @@
 #+title:      module
 #+date:       [2026-08-05 Wed 22:57]
-#+filetags:   
+#+filetags:
 #+identifier: 20260805T225748
+#+SETUPFILE:  https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 A tool to dynamically manage shell environment.
 
