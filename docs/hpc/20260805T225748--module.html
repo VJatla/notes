@@ -6,7 +6,7 @@
 <!-- 2026-08-05 Wed 23:05 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>module</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -192,175 +192,68 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<script>
-  window.MathJax = {
-    tex: {
-      ams: {
-        multlineWidth: '85%'
-      },
-      tags: 'ams',
-      tagSide: 'right',
-      tagIndent: '.8em'
-    },
-    chtml: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    svg: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    output: {
-      font: 'mathjax-modern',
-      displayOverflow: 'overflow'
-    }
-  };
-</script>
-
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 <body>
 <div id="content" class="content">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org8aab3d1">1. Verse</a></li>
-<li><a href="#orga323a2c">2. Notes</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org8aab3d1" class="outline-2">
-<h2 id="org8aab3d1"><span class="section-number-2">1.</span> Verse</h2>
-<div class="outline-text-2" id="text-1">
+<h1 class="title">module</h1>
 <p>
-कर्मण्येवाधिकारस्ते मा फलेषु कदाचन |
-मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि || 47 ||
-</p>
-</div>
-</div>
-<div id="outline-container-orga323a2c" class="outline-2">
-<h2 id="orga323a2c"><span class="section-number-2">2.</span> Notes</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-The following verse is very important and requires a separate notes. In this verse
-Swami Saravapriyananda makes ten key observations,
+A tool to dynamically manage shell environment.
 </p>
 
-<ol class="org-ol">
-<li>Karma and Phalam (Action and Result)
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-<ul class="org-ul">
-<li>Actions (karma) &#x2013;&gt; Results (Phalam).</li>
-<li>Phalam means fruit. Here it means fuits of work.</li>
-<li>We have the possibility of controling our actions, but not the results.</li>
-</ul></li>
 
-<li>Free Will
+<colgroup>
+<col  class="org-left" />
 
-<ul class="org-ul">
-<li>For this phylosophy to work, it is assumed that we have free will.</li>
-<li>The final teaching of advaita vedanta is that this is all will of
-god, and, you are god. But until this big realization, for all
-practical purposes we should assume we have free will.</li>
-</ul></li>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">module <b>spider</b> &lt;software package name&gt;</td>
+<td class="org-left">Gives details of software package.</td>
+</tr>
 
-<li>Importance of Focus
+<tr>
+<td class="org-left">module <b>avail</b></td>
+<td class="org-left">List all software packages available.</td>
+</tr>
 
-<ul class="org-ul">
-<li>The verse uses work in singular sense.</li>
-<li>This emphasis may be related to the fact that Krishna recommends
-doing one work at a time. This allows us to do a conscious and
-attentive effort.</li>
-</ul></li>
+<tr>
+<td class="org-left">module <b>load</b> &lt;software package name&gt;</td>
+<td class="org-left">Loads software package and all its dependencies.</td>
+</tr>
 
-<li>Three Approaches to Action
+<tr>
+<td class="org-left">module <b>list</b></td>
+<td class="org-left">Lists all the modules that are loaded in shell environment.</td>
+</tr>
 
-<ol class="org-ol">
-<li>Tamasik: Giving up on work. Inaction.</li>
-<li>Rajasik: How majority of worldy success happens. Action prompted
-thorugh self interest.</li>
-<li>Sattvik: Work prompted with a clean and clear mind. Work for
-greater good. Since there is no personal gain in this type of
-work, there will be calmness and peace. But, remember this is
-also not Karma Yoga. Karma Yoga goes beyond this.</li>
-</ol></li>
+<tr>
+<td class="org-left">module <b>unload</b> &lt;software package name&gt;</td>
+<td class="org-left">Unload a software package. Does not remove dependencies.</td>
+</tr>
 
-<li>Karma yoga is beyond these 3 approaches. \(3 > 2 > 1\). It
-disinterested action.</li>
+<tr>
+<td class="org-left">module <b>purge</b></td>
+<td class="org-left">Remove all loaded modules.</td>
+</tr>
 
-<li>Disinterested vs. Uninterested Action
-
-<ul class="org-ul">
-<li>Disinterested: Doing work but not really into it. Having no focus
-or enthusiasm.</li>
-<li>Uninterested: Work with enthusiam, give your 100% to task at
-hand. Once done, do not worry about the result. Phalam is not in
-our hands.</li>
-</ul></li>
-
-<li>How to Spiritualize Action and Results
-
-<ul class="org-ul">
-<li>Action: Do action as an offering to God or as self purification.</li>
-<li>Result: Accept highs and lows with dignitiy. Surrender the
-results to god and always remember the goal is beyond the
-worldly.</li>
-</ul></li>
-
-<li>Not Claiming the Results
-
-<ul class="org-ul">
-<li>By claiming results we fuel doership (kartritva), this binds us to samsara.</li>
-</ul></li>
-
-<li><p>
-How to Reduce Desires
-</p>
-
-<p>
-When a desire bubbles in the mind, try to remember the following,
-</p>
-
-<ul class="org-ul">
-<li>Desire stems from a sense of incompleteness. The incompleteness
-we feel is due to us not realizing we are inherently complete, but
-we are ignorant of it.</li>
-<li>Desire makes us dependent (we become slaves). The more we are
-slaves to our desires, the more we stride away from freedom.</li>
-<li>Unfulfilled desires lead to frustration.</li>
-<li>Desires never end. Fulfilling one will just lead to another.</li>
-</ul></li>
-
-<li>Karma and its Results are Impermanent
-
-<ul class="org-ul">
-<li>The Self is eternal. It cannot be tied down to temporary agency like work and results.</li>
-<li>Work cannot untimately free us. Work done through Karma Yoga
-leads to purity, and a path to Self knowledge (Jnana).</li>
-</ul></li>
-
-<li>Do Not Give in to Inaction
-
-<ul class="org-ul">
-<li>Laziness and escapism is much worse than desirous work.</li>
-<li>If you cannot immediately perform disinterested action (its
-quite hard), work with selfish motives (but keep pushing the
-motives to be more sattvik).</li>
-<li>When a person motive for action is primarily driven by sattvik
-motives, the transition to Karma Yoga from here is smooth.</li>
-</ul></li>
-</ol>
-</div>
-</div>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="postamble" class="status">
+<p class="date">Date: 2026-08-05 Wed 22:57</p>
 <p class="date">Created: 2026-08-05 Wed 23:05</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

@@ -28,6 +28,8 @@
   - [[file:gita/20240826T091004--verse-45-46-47__chapter2_class16_gita.org][verse 45 46 47]]
   - [[file:gita/verse-47.org][verse-47]]
   - [[file:gita/20250331T065527--verse-48.org][verse 48]]
+- hpc
+  - [[file:hpc/20260805T225748--module.org][module]]
 - python
   - [[file:python/20240925T173709--special-methods__python.org][special methods]]
 - statistics
