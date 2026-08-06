@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-08-05 Wed 23:20 -->
+<!-- 2026-08-05 Wed 23:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>simple linear regression using a single predictor</title>
@@ -232,9 +232,9 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdba4a4b">1. Estimating of parameters using least squares</a></li>
-<li><a href="#orgedfce08">2. How good is our parameter estimate?</a></li>
-<li><a href="#org25d733e">3. How well did our linear fit do?</a></li>
+<li><a href="#org3056b7e">1. Estimating of parameters using least squares</a></li>
+<li><a href="#org4bd16fc">2. How good is our parameter estimate?</a></li>
+<li><a href="#org17c4098">3. How well did our linear fit do?</a></li>
 </ul>
 </div>
 </div>
@@ -257,8 +257,8 @@ we can calculate an estimate of \(y\) (\(\hat{y}\))using,
 \begin{equation}
 \hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x \tag{2}
 \end{equation}
-<div id="outline-container-orgdba4a4b" class="outline-2">
-<h2 id="orgdba4a4b"><span class="section-number-2">1.</span> Estimating of parameters using least squares</h2>
+<div id="outline-container-org3056b7e" class="outline-2">
+<h2 id="org3056b7e"><span class="section-number-2">1.</span> Estimating of parameters using least squares</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Given training data, \(\{(x_1,y_1), (x_2,y_2), \ldots, (x_n, y_n)\}\), we want to
@@ -295,8 +295,8 @@ where \(\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i\) (the sample mean of \(y\)) an
 </p>
 </div>
 </div>
-<div id="outline-container-orgedfce08" class="outline-2">
-<h2 id="orgedfce08"><span class="section-number-2">2.</span> How good is our parameter estimate?</h2>
+<div id="outline-container-org4bd16fc" class="outline-2">
+<h2 id="org4bd16fc"><span class="section-number-2">2.</span> How good is our parameter estimate?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 We do not know the true slope coefficient, \(\beta_1\). However, we can
@@ -330,8 +330,8 @@ SE(\hat{\beta}_1), \hat{\beta}_1 + 2 \, SE(\hat{\beta}_1)]\).
 </p>
 </div>
 </div>
-<div id="outline-container-org25d733e" class="outline-2">
-<h2 id="org25d733e"><span class="section-number-2">3.</span> How well did our linear fit do?</h2>
+<div id="outline-container-org17c4098" class="outline-2">
+<h2 id="org17c4098"><span class="section-number-2">3.</span> How well did our linear fit do?</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 We can answer this question by calculating \(R^2\) value.
@@ -354,7 +354,7 @@ explained, and a value of 1 means the data lies exactly on the line.
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2026-02-07 Sat 22:09</p>
-<p class="date">Created: 2026-08-05 Wed 23:20</p>
+<p class="date">Created: 2026-08-05 Wed 23:22</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
